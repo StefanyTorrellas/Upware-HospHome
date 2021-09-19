@@ -1,5 +1,5 @@
 # HospiHome
-Sistema de Hospitalización en casa :pill: :syringe:
+Sistema de Hospitalización en casa :syringe:
 
 ## UPware
 - Camilo :sweat_smile:
