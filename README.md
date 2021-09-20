@@ -28,7 +28,7 @@ Por ahora el sistema solo corre en un servidor local, para previsualizarlo reali
 4. para detener el servidor, dentro de la consola debes presionar el atajo `^C` _Control-C_
 
 ## UPware
-- Camilo Ramírez :sweat_smile:
+- [Camilo Ramírez](https://github.com/c4r4mirez) :sweat_smile:
 - Carlos Gallego :wink:
 - Edwin G Escobar :satisfied:
 - [Miguel Cárdenas](https://github.com/miguel107) :sunglasses:
