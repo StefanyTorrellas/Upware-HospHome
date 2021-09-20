@@ -23,8 +23,8 @@ For now the system only runs on a local server, to preview it do the following:
 1. go to the *VetPet.App.Frontend* folder
 2. inside it:
 	- run the `dotnet run` command
-	- when run it will show something similar to: `http: // localhost: 5000`
-3. Go to the browser and open the link that the command gave `http: // localhost: 5000`
+	- when run it will show something similar to: `http://localhost:5000`
+3. Go to the browser and open the link that the command gave `http://localhost:5000`
 4. to stop the server, within the console you must press the shortcut `^ C` _Control-C_
 
 
