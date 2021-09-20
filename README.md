@@ -9,7 +9,7 @@ Sistema de Clínica Veterinaria :dog:
 Para empezar a trabajar en este proyecto sigue los siguientes pasos:
 
 1. clona el repositorio	`git clone https://github.com/StefanyTorrellas/Upware-VetPet.git`
-2. ubicate en el directorio y empieza a trabajar, _no olvides revisar el tablero kanban y las issues_
+2. ubicate en el directorio y empieza a trabajar, _no olvides revisar el tablero [kanban](https://github.com/StefanyTorrellas/Upware-VetPet/projects/1) y las [issues](https://github.com/StefanyTorrellas/Upware-VetPet/issues)_
 3. cuando hayas hecho un cambio puedes:
 	- `git add <nombre-archivo>` para añadir el archivo que modificaste
 	- `git add .` para añadir todos los archivos en el directorio
