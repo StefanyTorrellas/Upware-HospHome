@@ -2,7 +2,7 @@
 Sistema de Clínica Veterinaria :dog:
 
 ## Empezar
-para empezar a trabajar en este proyecto sigue los siguientes pasos:
+Para empezar a trabajar en este proyecto sigue los siguientes pasos:
 
 1. clona el repositorio	`git clone https://github.com/StefanyTorrellas/Upware-HospHome.git`
 2. ubicate en el directorio y empieza a trabajar, _no olvides revisar el tablero kanban y las issues_
@@ -13,6 +13,15 @@ para empezar a trabajar en este proyecto sigue los siguientes pasos:
 	- `git commit - "Agregué cambios al repositorio"`
 5. finalmente sube los cambios, en este caso a la rama *main* de nuestro repositorio
 	- `git push origin main`
+
+## Previsualización
+Por ahora el sistema solo corre en un servidor local, para previsualizarlo realiza lo siguiente:
+1. dirigete a la carpeta *VetPet.App.Frontend*
+2. dentro de ella:
+	- corre el comando `dotnet run`
+	- cuando ejecute mostrará algo similar a : `http://localhost:5000`
+3. dirigete al navegador y abre el link que el comando de dio `http://localhost:5000`
+4. para detener el servidor, dentro de la consola debes presionar el atajo `^C` _Control-C_
 
 ## UPware
 - Camilo Ramírez :sweat_smile:
