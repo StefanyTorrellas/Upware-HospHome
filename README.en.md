@@ -31,6 +31,6 @@ For now the system only runs on a local server, to preview it do the following:
 ## UPware
 - [Camilo Ramírez](https://github.com/c4r4mirez) :sweat_smile:
 - Carlos Gallego :wink:
-- Edwin G Escobar :satisfied:
+- [Edwin G Escobar](https://github.com/EdwinG241993) :satisfied:
 - [Miguel Cárdenas](https://github.com/miguel107) :sunglasses:
 - [Stefany Torrellas](https://github.com/StefanyTorrellas) :muscle:
