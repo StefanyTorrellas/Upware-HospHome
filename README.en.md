@@ -14,7 +14,7 @@ To start working on this project, follow these steps:
 	- `git add <file-name>` to add the file you modified
 	- `git add .` to add all files in directory
 4. then you must * commit * your code
-	- `git commit -" I added changes to the repository"`
+	- `git commit -m "I added changes to the repository"`
 5. finally upload the changes, in this case to the * main * branch of our repository
 	- `git push origin main`
 
