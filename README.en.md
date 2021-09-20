@@ -27,6 +27,10 @@ For now the system only runs on a local server, to preview it do the following:
 3. Go to the browser and open the link that the command gave `http://localhost:5000`
 4. to stop the server, within the console you must press the shortcut `^ C` _Control-C_
 
+## Upgrade
+To keep your repository updated with the changes made by your colleagues, run the following command:
+        - `git pull`
+Do not forget to do this frequently, so you will always work with the most current version.
 
 ## UPware
 - [Camilo Ramírez](https://github.com/c4r4mirez) :sweat_smile:
