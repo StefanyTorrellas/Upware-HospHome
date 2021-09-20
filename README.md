@@ -1,5 +1,5 @@
-# HospiHome
-Sistema de Hospitalización en casa :syringe:
+# VetPet
+Sistema de Clínica Veterinaria :dog:
 
 ## Empezar
 para empezar a trabajar en este proyecto sigue los siguientes pasos:
@@ -15,8 +15,8 @@ para empezar a trabajar en este proyecto sigue los siguientes pasos:
 	- `git push origin main`
 
 ## UPware
-- Camilo :sweat_smile:
+- Camilo Ramírez :sweat_smile:
 - Carlos Gallego :wink:
-- Edwin :satisfied:
+- Edwin G Escobar :satisfied:
 - [Miguel Cárdenas](https://github.com/miguel107) :sunglasses:
 - [Stefany Torrellas](https://github.com/StefanyTorrellas) :muscle:
