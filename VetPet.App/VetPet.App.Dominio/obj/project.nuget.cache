@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Rpf5uZlKl8O7Oa20777Z29PmiQwHUZqJBxDko1QLKULyNuWZiSQCQ1hjWu6C0aRSvGTdRIm+NwR8PzgVg56nXw==",
+  "success": true,
+  "projectFilePath": "/home/mc107/Documents/Study/mintic/Upware-HospHome/HospiHome.App/HospiHome.App.Dominio/HospiHome.App.Dominio.csproj",
+  "expectedPackageFiles": [
+    "/home/mc107/.nuget/packages/microsoft.aspnetcore.app.ref/5.0.0/microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
