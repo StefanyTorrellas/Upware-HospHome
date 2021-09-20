@@ -2,8 +2,8 @@
 Sistema de Clínica Veterinaria :dog:
 
 ### Idiomas
-:ceuta_melilla: Español
-:us: [Inglés](./README.en.md)
+- :ceuta_melilla: Español
+- :us: [Inglés](./README.en.md)
 
 ## Empezar
 Para empezar a trabajar en este proyecto sigue los siguientes pasos:

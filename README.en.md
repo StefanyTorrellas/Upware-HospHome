@@ -2,8 +2,8 @@
 Sistema de Clínica Veterinaria :cat:
 
 ### Languages
-:ceuta_melilla: [Spanish](https://github.com/StefanyTorrellas/Upware-HospHome)
-:us: English
+- :ceuta_melilla: [Spanish](https://github.com/StefanyTorrellas/Upware-HospHome)
+- :us: English
 
 ## Empezar
 Para empezar a trabajar en este proyecto sigue los siguientes pasos:
