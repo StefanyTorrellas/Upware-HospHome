@@ -27,6 +27,11 @@ Por ahora el sistema solo corre en un servidor local, para previsualizarlo reali
 3. dirigete al navegador y abre el link que el comando de dio `http://localhost:5000`
 4. para detener el servidor, dentro de la consola debes presionar el atajo `^C` _Control-C_
 
+## Actualización
+Para mantener tu repositorio actualizado con los cambios hechos por tus compañeros, corre el siguiente comando:
+	- `git pull`
+No olvides realizar esto con cierta frecuencia, asi siempre trabajarás con la versión más actual. 
+
 ## UPware
 - [Camilo Ramírez](https://github.com/c4r4mirez) :sweat_smile:
 - Carlos Gallego :wink:
