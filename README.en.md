@@ -1,9 +1,9 @@
 # VetPet
-Sistema de Clínica Veterinaria :dog:
+Sistema de Clínica Veterinaria :cat:
 
-### Idiomas
-:ceuta_melilla: Español
-:us: [Inglés](./README.en.md)
+### Languages
+:ceuta_melilla: [Spanish](https://github.com/StefanyTorrellas/Upware-HospHome)
+:us: English
 
 ## Empezar
 Para empezar a trabajar en este proyecto sigue los siguientes pasos:
