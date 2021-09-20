@@ -30,7 +30,7 @@ Por ahora el sistema solo corre en un servidor local, para previsualizarlo reali
 ## Actualización
 Para mantener tu repositorio actualizado con los cambios hechos por tus compañeros, corre el siguiente comando:
 	-`git pull` 
-No olvides realizar esto con cierta frecuencia, asi siempre trabajarás con la versión más actual. 
+<br />No olvides realizar esto con cierta frecuencia, asi siempre trabajarás con la versión más actual. 
 
 ## UPware
 - [Camilo Ramírez](https://github.com/c4r4mirez) :sweat_smile:
