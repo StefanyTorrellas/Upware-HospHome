@@ -20,7 +20,7 @@ To start working on this project, follow these steps:
 
 ## Preview
 For now the system only runs on a local server, to preview it do the following:
-1. go to the * VetPet.App.Frontend * folder
+1. go to the *VetPet.App.Frontend* folder
 2. inside it:
 	- run the `dotnet run` command
 	- when run it will show something similar to: `http: // localhost: 5000`
