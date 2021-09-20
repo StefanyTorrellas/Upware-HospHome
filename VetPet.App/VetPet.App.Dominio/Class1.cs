@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HospiHome.App.Dominio
+namespace VetPet.App.Dominio
 {
     public class Class1
     {

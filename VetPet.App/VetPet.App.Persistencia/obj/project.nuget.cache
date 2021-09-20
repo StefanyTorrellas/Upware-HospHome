@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0OJ6X2RJpqmAg3KhBMzrfx8JTH5s0hRzJBff2Y3VmeOkCWy3ap5MQeVdcqfVqA5bcnh1Uv8cmaC7jscF59GIGw==",
+  "dgSpecHash": "Hspp+UpvMIMbFLJqoYnq1yo9mMyiCIt1gzFjQvwF6VgVoTKYL7I/8gLFC8DwEurYRCAn98C+zIGIoJFtKek/mA==",
   "success": true,
-  "projectFilePath": "/home/mc107/Documents/Study/mintic/Upware-HospHome/HospiHome.App/HospiHome.App.Persistencia/HospiHome.App.Persistencia.csproj",
+  "projectFilePath": "/home/mc107/Documents/Study/mintic/Upware-HospHome/VetPet.App/VetPet.App.Persistencia/VetPet.App.Persistencia.csproj",
   "expectedPackageFiles": [
     "/home/mc107/.nuget/packages/microsoft.aspnetcore.app.ref/5.0.0/microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512"
   ],

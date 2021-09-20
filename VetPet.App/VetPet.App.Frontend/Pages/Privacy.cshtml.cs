@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
-namespace HospiHome.App.Frontend.Pages
+namespace VetPet.App.Frontend.Pages
 {
     public class PrivacyModel : PageModel
     {

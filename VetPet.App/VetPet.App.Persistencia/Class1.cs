@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HospiHome.App.Persistencia
+namespace VetPet.App.Persistencia
 {
     public class Class1
     {

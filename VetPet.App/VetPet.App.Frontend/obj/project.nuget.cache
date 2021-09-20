@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "udB4mMIdR97L5k2jXKAqd4pnjDd1ZBr+3W2szcv0Q1p7NnWb2Io5heiIsLmRG8e8ATKXVtz918A92Jh1K333KQ==",
+  "dgSpecHash": "NtXlMtW5fRqdExprBtNTUazfWVZH77UhfziSc4ur/4bFGiCnsf4o3q5on5RVekSqa9DE5UYPlRvf4nFLIP1yAw==",
   "success": true,
-  "projectFilePath": "/home/mc107/Documents/Study/mintic/Upware-HospHome/HospiHome.App/HospiHome.App.Frontend/HospiHome.App.Frontend.csproj",
+  "projectFilePath": "/home/mc107/Documents/Study/mintic/Upware-HospHome/VetPet.App/VetPet.App.Frontend/VetPet.App.Frontend.csproj",
   "expectedPackageFiles": [
     "/home/mc107/.nuget/packages/microsoft.aspnetcore.app.ref/5.0.0/microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512"
   ],

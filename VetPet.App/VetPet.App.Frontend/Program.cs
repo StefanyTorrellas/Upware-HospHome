@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace HospiHome.App.Frontend
+namespace VetPet.App.Frontend
 {
     public class Program
     {
