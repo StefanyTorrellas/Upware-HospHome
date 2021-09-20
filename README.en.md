@@ -29,7 +29,7 @@ For now the system only runs on a local server, to preview it do the following:
 
 
 ## UPware
-- Camilo Ramírez :sweat_smile:
+- [Camilo Ramírez](https://github.com/c4r4mirez) :sweat_smile:
 - Carlos Gallego :wink:
 - Edwin G Escobar :satisfied:
 - [Miguel Cárdenas](https://github.com/miguel107) :sunglasses:
