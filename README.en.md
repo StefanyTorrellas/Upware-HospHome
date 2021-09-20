@@ -29,7 +29,7 @@ For now the system only runs on a local server, to preview it do the following:
 
 ## Upgrade
 To keep your repository updated with the changes made by your colleagues, run the following command:
-        - `git pull`
+        -`git pull`
 <br />Do not forget to do this frequently, so you will always work with the most current version.
 
 ## UPware
