@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "j8tBJWyl3IaBHKkojEGvY0KdYyB+DRwKJ84Bz+zV8PM6cBkL3AIJWrAXMVRd//xKVIvGuLX/5DqCpFDo8ujgBg==",
+  "success": true,
+  "projectFilePath": "/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Consola/VetPet.App.Consola.csproj",
+  "expectedPackageFiles": [
+    "/home/mc107/.nuget/packages/microsoft.aspnetcore.app.ref/5.0.0/microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
