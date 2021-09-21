@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace VetPet.App.Frontend.Pages.Index
+namespace VetPet.App.Frontend.Pages.Login
 {
     public class LoginModel : PageModel
     {
