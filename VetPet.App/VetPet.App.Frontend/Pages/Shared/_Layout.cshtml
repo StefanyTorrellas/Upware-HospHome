@@ -6,12 +6,11 @@
     <title>@ViewData["Title"] | VetPet</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom box-shadow mb-3 sticky-pop">
-            <div class="container">
+            <!--<div class="container">-->
                 <a class="navbar-brand" asp-area="" asp-page="/Index">&#128054; VetPet</a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,16 +20,25 @@
                 <div class="navbar-collapse collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav flex-grow-1 mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <a class="nav-link" asp-area="" asp-page="/Index">Nothing</a>
                         </li>
                     </ul>
-                    <form class="form-inline my-2 my-lg-0">
+                    <button class="btn btn-outline-primary mr-sm-4 mb-sm-0 mb-2" type="">INICIAR SESIÓN</button>
+                    <!--<form class="form-inline my-2 my-sm-0">
                         <input class="form-control mr-sm-2" type="search" placeholder="Busca en VetPet" aria-label="Buscar">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                        <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar</button>
+                    </form>-->
+                    <form class="form-inline my-2 my-sm-0">
+                    <div class="input-group">
+                        <input type="search" class="form-control" placeholder="Buscar en VetPet" aria-label="Buscar" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-info" type="submit">Buscar</button>
+                        </div>
+                    </div>
                     </form>
                 </div>
 
-            </div>
+            <!--</div>-->
         </nav>
     </header>
     <div class="container">
@@ -42,6 +50,13 @@
     <footer class="border-top footer text-muted bg-dark">
         <div class="container text-light">
             &copy; 2021 - UPware - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            	<i class="fab fa-facebook-f"></i>
+        <div>
+            <a href="https://github.com/StefanyTorrellas/Upware-VetPet" target="_blank" class="me-4 text-reset">
+                <!--<i class="fab fa-github" style="color:white"></i>-->
+                <div class="bi bi-github"></div>
+            </a>
+        </div>
         </div>
     </footer>
 
