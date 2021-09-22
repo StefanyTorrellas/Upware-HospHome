@@ -83,3 +83,5 @@
 /home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/Contacto.cshtml.g.cs
 /home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/Nosotros.cshtml.g.cs
 /home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/Servicios.cshtml.g.cs
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/Home.cshtml.g.cs
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/Shared/_StartLayout.cshtml.g.cs

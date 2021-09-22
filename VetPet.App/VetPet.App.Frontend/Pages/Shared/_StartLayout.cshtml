@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] | VetPet</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom box-shadow mb-3 sticky-pop">
+            <!--<div class="container">-->
+                <!--brand-->
+                <a class="navbar-brand" asp-area="" asp-page="/Index">&#128054; VetPet</a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                    <div class="navbar-nav flex-grow-1 mr-auto">
+                        <!--<li class="nav-item">-->
+                            <a class="nav-link" asp-area="" asp-page="/Servicios">Servicios</a>
+                            <a class="nav-link" asp-area="" asp-page="/Nosotros">Nosotros</a>
+                            <a class="nav-link" asp-area="" asp-page="/Contacto">Contáctanos</a>
+                        <!--</li>-->
+                    </div>
+                    <!--<button class="btn btn-outline-primary mr-sm-4 mb-sm-0 mb-2" type="" onclick="/Login">INICIAR SESIÓN</button>-->
+                    <!--<div class="nav-item dropdown">-->
+                    <ul class="navbar-nav ms-auto mr-auto">
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle mr-sm-3 mb-sm-0 mb-2" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">USUARIO</a>
+
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item">Mi Perfil</a>
+                            <a class="dropdown-item">Cerrar sesión</a>
+                        </div>
+                        </li>
+                    </ul>
+
+                    <form class="form-inline my-2 my-sm-0">
+                    <div class="input-group">
+                        <input type="search" class="form-control" placeholder="Buscar en VetPet" aria-label="Buscar" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-info" type="submit">Buscar</button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+
+            <!--</div>-->
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted bg-dark">
+        <div class="container text-light">
+            &copy; 2021 - UPware - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            	<i class="fab fa-facebook-f"></i>
+        <div>
+            <a href="https://github.com/StefanyTorrellas/Upware-VetPet" target="_blank" class="me-4 text-reset">
+                <!--<i class="fab fa-github" style="color:white"></i>-->
+                <div class="bi bi-github"></div>
+            </a>
+        </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
