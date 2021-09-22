@@ -11,5 +11,19 @@ namespace VetPet.App.Persistencia
         public DbSet<Mascota> Mascotas {get; set;}
         public DbSet<Cita> Citas{get; set;}
         public DbSet<HistoriaClinica> HistoriasClinicas {get; set;}
+
+        protected override OnConfiguring(DbContextOptionsBuilder options)
+        {
+            if(!options.IsConfigured) {
+                options.UseSqlServer("Data Source = (localdb \\MSSQLLocalDB; Initial Catalog = VetPet)")
+            }
+        }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.Entity<Persona>()
+                .HasIndex(u => u.cedula)
+                .IsUnique();
+        }
     }
 }
