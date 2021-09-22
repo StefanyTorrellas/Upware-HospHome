@@ -2,8 +2,8 @@
 Veterinary Clinic System :cat:
 
 ### Languages
-- :ceuta_melilla: [Spanish](https://github.com/StefanyTorrellas/Upware-HospHome)
-- :us: English
+- 🇪🇸 [Spanish](https://github.com/StefanyTorrellas/Upware-HospHome)
+- 🇺🇸 English
 
 ## Starting
 To start working on this project, follow these steps:
