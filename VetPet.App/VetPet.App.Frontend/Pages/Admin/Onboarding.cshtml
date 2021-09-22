@@ -1,0 +1,13 @@
+﻿@page
+@model VetPet.App.Frontend.Pages.OnboardingModel
+@{
+    Layout = "_LoginLayout";
+    ViewData["Title"] = "Onboarding ";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bienvenidos!</h1>
+    <p>Sistema de autenticación.</p>
+    <p>Por ahora puedes ver el <a asp-page="/Admin/Administracion">Home Page</a> que aparecerá despúes de que el administrador inicie sesión</p>
+    <p>Ya eres administrador <a asp-page="/Admin/Login">Inicia sesión</a> para continuar </p>
+</div>
