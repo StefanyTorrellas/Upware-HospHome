@@ -8,6 +8,8 @@ namespace VetPet.App.Persistencia
     {
         public DbSet<Persona> Personas {get; set;}
         public DbSet<Propietario> Propietarios {get; set;}
-        public DbSet<Mascota> Mascotas {get; set;}   
+        public DbSet<Mascota> Mascotas {get; set;}
+        public DbSet<Cita> Citas{get; set;}
+        public DbSet<HistoriaClinica> HistoriasClinicas {get; set;}
     }
 }
