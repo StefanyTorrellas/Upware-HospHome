@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace VetPet.App.Frontend.Pages
 {
-    public class OnboardingModel : PageModel
+    public class InicioModel : PageModel
     {
         public void OnGet()
         {
