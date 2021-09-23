@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/mc107/Documents/Study/mintic/Upware-HospHome/VetPet.App/VetPet.App.Persistencia/VetPet.App.Persistencia.csproj": {}
+    "/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Persistencia/VetPet.App.Persistencia.csproj": {}
   },
   "projects": {
-    "/home/mc107/Documents/Study/mintic/Upware-HospHome/VetPet.App/VetPet.App.Persistencia/VetPet.App.Persistencia.csproj": {
+    "/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Dominio/VetPet.App.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/mc107/Documents/Study/mintic/Upware-HospHome/VetPet.App/VetPet.App.Persistencia/VetPet.App.Persistencia.csproj",
-        "projectName": "VetPet.App.Persistencia",
-        "projectPath": "/home/mc107/Documents/Study/mintic/Upware-HospHome/VetPet.App/VetPet.App.Persistencia/VetPet.App.Persistencia.csproj",
+        "projectUniqueName": "/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Dominio/VetPet.App.Dominio.csproj",
+        "projectName": "VetPet.App.Dominio",
+        "projectPath": "/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Dominio/VetPet.App.Dominio.csproj",
         "packagesPath": "/home/mc107/.nuget/packages/",
-        "outputPath": "/home/mc107/Documents/Study/mintic/Upware-HospHome/VetPet.App/VetPet.App.Persistencia/obj/",
+        "outputPath": "/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Dominio/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/mc107/.nuget/NuGet/NuGet.Config"
@@ -37,6 +37,74 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.205/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Persistencia/VetPet.App.Persistencia.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Persistencia/VetPet.App.Persistencia.csproj",
+        "projectName": "VetPet.App.Persistencia",
+        "projectPath": "/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Persistencia/VetPet.App.Persistencia.csproj",
+        "packagesPath": "/home/mc107/.nuget/packages/",
+        "outputPath": "/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Persistencia/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/mc107/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Dominio/VetPet.App.Dominio.csproj": {
+                "projectPath": "/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Dominio/VetPet.App.Dominio.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

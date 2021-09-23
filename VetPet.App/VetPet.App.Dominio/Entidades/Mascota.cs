@@ -2,7 +2,7 @@ using System;
 
 namespace VetPet.App.Dominio
 {
-    public class mascota
+    public class Mascota
     {
         public int id {get; set;} 
         public Tipo tipo {get; set;}
