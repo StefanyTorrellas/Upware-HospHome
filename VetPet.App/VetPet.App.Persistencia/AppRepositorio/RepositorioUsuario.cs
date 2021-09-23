@@ -14,20 +14,20 @@ namespace VetPet.App.Persistencia
         }
 
         // Obtener todas las mascotas
-        public IEnumerable<Usuario> getAllMascotas()
+        public IEnumerable<Usuario> getAllUsuarios()
         {
             return _context.Usuarios;
         }
 
         // Añadir usuario
-        public Usuario addMascota(Usuario usuario)
+        public Usuario addUsuario(Usuario usuario)
         {
-            Usuario mascotaNueva = _context.Add(usuario).Entity;
-            return mascotaNueva;
+            Usuario usuarioNuevo = _context.Add(usuario).Entity;
+            return usuarioNuevo;
         }
         
         // Editar usuario
-        public Usuario editMascota(Usuario usuario)
+        public Usuario editUsuario(Usuario usuario)
         {
             Usuario usuarioEdicion = _context.Usuarios.FirstOrDefault(m => m.id == usuario.id);
                 if(usuarioEdicion != null) {
