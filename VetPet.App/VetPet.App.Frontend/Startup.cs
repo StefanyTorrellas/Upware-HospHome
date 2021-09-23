@@ -26,6 +26,7 @@ namespace VetPet.App.Frontend
         {
             services.AddRazorPages();
             services.AddSingleton<IRepositorioUsuario>(new RepositorioUsuario(new Context()));
+            services.AddSingleton<IRepositorioAdmin>(new RepositorioAdmin(new Context()));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
