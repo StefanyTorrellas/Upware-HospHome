@@ -1,0 +1,13 @@
+﻿@page "/admin/personal"
+@model VetPet.App.Frontend.Pages.PersonalModel
+@{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Sistema de clínica veterinaría";
+}
+<div class="text-center">
+    <h1 class="display-4">Personal</h1>
+    <p>Acá podrás encontrar el personal actual de VetPet</p>
+    <a class="btn btn-success" href="/admin/veterinario/list">Veterinarios</a>
+    <a class="btn btn-info" asp-page="/Auxiliar/ListAuxiliar">Auxiliares</a>
+</div>
+
