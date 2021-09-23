@@ -11,11 +11,12 @@ namespace VetPet.App.Persistencia
         public DbSet<Mascota> Mascotas {get; set;}
         public DbSet<Cita> Citas{get; set;}
         public DbSet<HistoriaClinica> HistoriasClinicas {get; set;}
+        public DbSet<Usuario> Usuarios {get; set;}
 
-        protected override OnConfiguring(DbContextOptionsBuilder options)
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             if(!options.IsConfigured) {
-                options.UseSqlServer("Data Source = (localdb \\MSSQLLocalDB; Initial Catalog = VetPet)")
+                options.UseSqlServer("Data Source = (localdb \\MSSQLLocalDB; Initial Catalog = VetPet)");
             }
         }
 
