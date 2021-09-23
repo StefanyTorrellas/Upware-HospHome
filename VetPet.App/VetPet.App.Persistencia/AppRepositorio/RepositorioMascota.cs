@@ -10,7 +10,7 @@ namespace VetPet.App.Persistencia
         private readonly Context _context;
         public RepositorioMascota(Context context)
         {
-            this.context = context;
+            this._context = context;
         }
 
         // Obtener todas las mascotas
@@ -22,16 +22,16 @@ namespace VetPet.App.Persistencia
         // Añadir mascota
         public Mascota addMascota(Mascota mascota)
         {
-            Mascota mascotaNueva = _context.Add(Mascota).Entity;
+            Mascota mascotaNueva = _context.Add(mascota).Entity;
             return mascotaNueva;
         }
         
         // Editar mascota
         public Mascota editMascota(Mascota mascota)
         {
-            Mascota mascotaEdicion = _context.Mascotas.FirstOrDefault(m => m.id == mascota.id)
+            Mascota mascotaEdicion = _context.Mascotas.FirstOrDefault(m => m.id == mascota.id);
                 if(mascotaEdicion != null) {
-                    mascotaEdicion.intd = mascota.id;
+                    mascotaEdicion.id = mascota.id;
                     mascotaEdicion.tipo = mascota.tipo;
                     mascotaEdicion.name = mascota.name;
                     mascotaEdicion.edad = mascota.edad;
