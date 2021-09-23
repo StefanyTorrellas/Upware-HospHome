@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Uw4cdcuc+DoeG8Rwg47yEe4qw0dPKzy4KonEVLhc7Gt27no4kjbw2JyFywOv6CtDOD45YSgdMpQopR7TGP5jFg==",
+  "dgSpecHash": "6hNrbfz5cO74R0AzJMPhI7Az12AgpvD6JKVRYaa7bpWKsJ0e8W4Cq+gdEKSz1l/991CYQ3b2o4NpGud1uJvqtw==",
   "success": true,
-  "projectFilePath": "/home/mc107/Documents/Study/mintic/Upware-HospHome/VetPet.App/VetPet.App.Dominio/VetPet.App.Dominio.csproj",
+  "projectFilePath": "/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Dominio/VetPet.App.Dominio.csproj",
   "expectedPackageFiles": [
     "/home/mc107/.nuget/packages/microsoft.aspnetcore.app.ref/5.0.0/microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512"
   ],

@@ -1,0 +1,12 @@
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Dominio/bin/Debug/net5.0/VetPet.App.Dominio.deps.json
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Dominio/bin/Debug/net5.0/VetPet.App.Dominio.dll
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Dominio/bin/Debug/net5.0/ref/VetPet.App.Dominio.dll
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Dominio/bin/Debug/net5.0/VetPet.App.Dominio.pdb
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Dominio/obj/Debug/net5.0/VetPet.App.Dominio.csprojAssemblyReference.cache
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Dominio/obj/Debug/net5.0/VetPet.App.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Dominio/obj/Debug/net5.0/VetPet.App.Dominio.AssemblyInfoInputs.cache
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Dominio/obj/Debug/net5.0/VetPet.App.Dominio.AssemblyInfo.cs
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Dominio/obj/Debug/net5.0/VetPet.App.Dominio.csproj.CoreCompileInputs.cache
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Dominio/obj/Debug/net5.0/VetPet.App.Dominio.dll
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Dominio/obj/Debug/net5.0/ref/VetPet.App.Dominio.dll
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Dominio/obj/Debug/net5.0/VetPet.App.Dominio.pdb

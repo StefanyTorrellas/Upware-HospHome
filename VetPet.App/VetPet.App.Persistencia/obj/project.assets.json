@@ -1481,6 +1481,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "VetPet.App.Dominio/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/VetPet.App.Dominio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VetPet.App.Dominio.dll": {}
+        }
       }
     }
   },
@@ -5693,11 +5703,17 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "VetPet.App.Dominio/1.0.0": {
+      "type": "project",
+      "path": "../VetPet.App.Dominio/VetPet.App.Dominio.csproj",
+      "msbuildProject": "../VetPet.App.Dominio/VetPet.App.Dominio.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.10"
+      "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.10",
+      "VetPet.App.Dominio >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5724,7 +5740,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Dominio/VetPet.App.Dominio.csproj": {
+              "projectPath": "/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Dominio/VetPet.App.Dominio.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,0 +1,15 @@
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Persistencia/bin/Debug/net5.0/VetPet.App.Persistencia.deps.json
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Persistencia/bin/Debug/net5.0/VetPet.App.Persistencia.dll
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Persistencia/bin/Debug/net5.0/ref/VetPet.App.Persistencia.dll
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Persistencia/bin/Debug/net5.0/VetPet.App.Persistencia.pdb
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Persistencia/bin/Debug/net5.0/VetPet.App.Dominio.dll
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Persistencia/bin/Debug/net5.0/VetPet.App.Dominio.pdb
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Persistencia/obj/Debug/net5.0/VetPet.App.Persistencia.csprojAssemblyReference.cache
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Persistencia/obj/Debug/net5.0/VetPet.App.Persistencia.GeneratedMSBuildEditorConfig.editorconfig
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Persistencia/obj/Debug/net5.0/VetPet.App.Persistencia.AssemblyInfoInputs.cache
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Persistencia/obj/Debug/net5.0/VetPet.App.Persistencia.AssemblyInfo.cs
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Persistencia/obj/Debug/net5.0/VetPet.App.Persistencia.csproj.CoreCompileInputs.cache
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Persistencia/obj/Debug/net5.0/VetPet.App.Persistencia.csproj.CopyComplete
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Persistencia/obj/Debug/net5.0/VetPet.App.Persistencia.dll
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Persistencia/obj/Debug/net5.0/ref/VetPet.App.Persistencia.dll
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Persistencia/obj/Debug/net5.0/VetPet.App.Persistencia.pdb
