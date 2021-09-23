@@ -85,3 +85,14 @@
 /home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/Servicios.cshtml.g.cs
 /home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/Home.cshtml.g.cs
 /home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/Shared/_StartLayout.cshtml.g.cs
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/Onboarding.cshtml.g.cs
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/User/Mascotas.cshtml.g.cs
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/User/Profile.cshtml.g.cs
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/Admin/Administracion.cshtml.g.cs
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/Admin/Inicio.cshtml.g.cs
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/Admin/Registro.cshtml.g.cs
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/Admin/Perfil.cshtml.g.cs
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/Shared/_AdminLayout.cshtml.g.cs
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/User/Contact.cshtml.g.cs
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/User/Services.cshtml.g.cs
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/User/Team.cshtml.g.cs
