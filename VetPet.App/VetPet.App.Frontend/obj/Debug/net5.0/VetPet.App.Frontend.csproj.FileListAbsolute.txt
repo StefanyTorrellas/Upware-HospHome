@@ -141,8 +141,9 @@
 /home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/bin/Debug/net5.0/MySqlConnector.dll
 /home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/bin/Debug/net5.0/Pomelo.EntityFrameworkCore.MySql.dll
 /home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/Admin/Propietarios/AddPropietarios.cshtml.g.cs
-/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/Admin/Propietarios/DetailPropietarios.cshtml.g.cs
 /home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/Admin/Propietarios/EditPropietarios.cshtml.g.cs
 /home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/Admin/Propietarios/ListPropietarios.cshtml.g.cs
 /home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/Admin/Propietarios/RemovePropietarios.cshtml.g.cs
 /home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/Admin/User.cshtml.g.cs
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/bin/Debug/net5.0/Humanizer.dll
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Design.dll

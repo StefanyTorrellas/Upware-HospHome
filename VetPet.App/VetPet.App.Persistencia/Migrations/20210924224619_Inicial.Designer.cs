@@ -8,7 +8,7 @@ using VetPet.App.Persistencia;
 namespace VetPet.App.Persistencia.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20210924191415_Inicial")]
+    [Migration("20210924224619_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
