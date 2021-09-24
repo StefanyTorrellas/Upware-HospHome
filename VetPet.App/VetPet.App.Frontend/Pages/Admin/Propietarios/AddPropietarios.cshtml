@@ -1,0 +1,43 @@
+﻿@page "/admin/propietarios/add"
+@model VetPet.App.Frontend.Pages.AddPropietariosModel
+@{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Sistema de clínica veterinaría";
+}
+<h1>Agregar propietario</h1>
+<form method="post" class="mt-3">
+    <input hidden asp-for="propietario.id"/>
+    <div class="form-group row">
+        <label asp-for="propietario.cedula" class="col-sm-2">Cédula</label>
+        <input asp-for="propietario.cedula" class="form-control" value="" required>
+    </div>
+    <div class="form-group row">
+        <label asp-for="propietario.nombre" class="col-sm-2">Nombre</label>
+        <input asp-for="propietario.nombre" class="form-control" value="">
+    </div>   
+    <div class="form-group row">
+        <label asp-for="propietario.edad" class="col-sm-2">Edad</label>
+        <input asp-for="propietario.edad" class="form-control" value="">
+    </div>  
+    <div class="form-group row">
+        <label asp-for="propietario.genero" class="col-sm-2">Genero</label>
+        <input asp-for="propietario.genero" class="form-control" value="">
+        <!--
+        <div class="col-sm-10">
+            <select asp-for="propietario.genero" asp-items="Html.GetEnumSelectList<genero>()"></select>   
+        </div>
+        -->
+    </div>  
+    <div class="form-group row">
+        <label asp-for="propietario.ciudad" class="col-sm-2">Ciudad</label>
+        <input asp-for="propietario.ciudad" class="form-control" value="">
+    </div>  
+    <div class="form-group row">
+        <label asp-for="propietario.direccion" class="col-sm-2">Dirección</label>
+        <input asp-for="propietario.direccion" class="form-control" value="" required>
+    </div>  
+    <div class="form-group row">
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <a asp-page="/admin/propietarios/list" class="btn btn-primary">Cancelar</a>
+    </div>
+</form>
