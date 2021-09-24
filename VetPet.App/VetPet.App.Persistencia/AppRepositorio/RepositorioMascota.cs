@@ -33,7 +33,7 @@ namespace VetPet.App.Persistencia
                 if(mascotaEdicion != null) {
                     mascotaEdicion.id = mascota.id;
                     mascotaEdicion.tipo = mascota.tipo;
-                    mascotaEdicion.name = mascota.name;
+                    mascotaEdicion.nombre = mascota.nombre;
                     mascotaEdicion.edad = mascota.edad;
                     mascotaEdicion.descripcion = mascota.descripcion;
                     mascotaEdicion.propietario_id = mascota.propietario_id;

@@ -1,4 +1,6 @@
 ﻿using System;
+using VetPet.App.Dominio;
+using VetPet.App.Persistencia;
 
 namespace VetPet.App.Consola
 {
@@ -6,7 +8,7 @@ namespace VetPet.App.Consola
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            IRepositorioVeterinario repositorioVeterinario = new RepositorioVeterinario(new Context());
         }
     }
 }
