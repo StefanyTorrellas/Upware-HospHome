@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\VetPet.App.Persistencia\VetPet.App.Persistencia.csproj" />
+    <ProjectReference Include="..\VetPet.App.Dominio\VetPet.App.Dominio.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
