@@ -147,7 +147,5 @@
 /home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/Admin/Propietarios/RemovePropietarios.cshtml.g.cs
 /home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/Admin/User.cshtml.g.cs
 <<<<<<< HEAD
-/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/bin/Debug/net5.0/Humanizer.dll
-/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Design.dll
 =======
 >>>>>>> 8dfe2f1d42c8ab09c1dd3b7896f6d38ce5687dff
