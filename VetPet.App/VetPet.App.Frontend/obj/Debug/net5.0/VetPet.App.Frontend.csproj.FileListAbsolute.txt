@@ -147,3 +147,4 @@
 /home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/Admin/User.cshtml.g.cs
 /home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/bin/Debug/net5.0/Humanizer.dll
 /home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Design.dll
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/Admin/Propietarios/DetailPropietarios.cshtml.g.cs
