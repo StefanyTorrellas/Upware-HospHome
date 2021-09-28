@@ -24,13 +24,20 @@ namespace VetPet.App.Frontend.Pages
         }
 
         public IActionResult OnPost(Propietario propietario) {
-            try {
-                repositorioPropietario.addPropietario(propietario);
-                return RedirectToPage("/Admin/Propietarios/ListPropietarios");
+//	    if (ModelState.IsValid)
+//	    {
+            	try {
+                    repositorioPropietario.addPropietario(propietario);
+                    return RedirectToPage("/Admin/Propietarios/ListPropietarios");
+                }
+                catch {
+                    return RedirectToPage("/Error");
+                }
             }
-            catch {
-                return RedirectToPage("/Error");
+/*	    else 
+            {
+		return Page();
             }
-        }
+        } */
     }
 }
