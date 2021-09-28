@@ -1,5 +1,6 @@
 ﻿@page "/admin/propietarios/add"
 @model VetPet.App.Frontend.Pages.AddPropietariosModel
+@using VetPet.App.Dominio
 @{
     Layout = "_AdminLayout";
     ViewData["Title"] = "Sistema de clínica veterinaría";
@@ -21,12 +22,12 @@
     </div>  
     <div class="form-group row">
         <label asp-for="propietario.genero" class="col-sm-2">Genero</label>
-        <input asp-for="propietario.genero" class="form-control" value="">
-        <!--
+        <!--<input asp-for="propietario.genero" class="form-control" value="">-->
+        
         <div class="col-sm-10">
-            <select asp-for="propietario.genero" asp-items="Html.GetEnumSelectList<Genero>()"></select>   
+            <select asp-for="propietario.genero" asp-items="Html.GetEnumSelectList<Genero>()"></select>
         </div>
-        -->
+        
     </div>  
     <div class="form-group row">
         <label asp-for="propietario.ciudad" class="col-sm-2">Ciudad</label>

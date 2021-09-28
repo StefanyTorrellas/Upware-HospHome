@@ -32,6 +32,7 @@ namespace VetPet.App.Persistencia
             Usuario usuarioEdicion = _context.Usuarios.FirstOrDefault(m => m.id == usuario.id);
                 if(usuarioEdicion != null) {
                     usuarioEdicion.id = usuario.id;
+		    usuarioEdicion.username = usuario.username;
                     usuarioEdicion.password = usuario.password;
                     _context.SaveChanges();
                 }

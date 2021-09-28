@@ -8,8 +8,8 @@ using VetPet.App.Persistencia;
 namespace VetPet.App.Persistencia.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20210924191415_Inicial")]
-    partial class Inicial
+    [Migration("20210928183550_Inicial1")]
+    partial class Inicial1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -47,14 +47,14 @@ namespace VetPet.App.Persistencia.Migrations
                     b.Property<string>("anotaciones")
                         .HasColumnType("longtext");
 
-                    b.Property<string>("cita_id")
-                        .HasColumnType("longtext");
+                    b.Property<int>("cita_id")
+                        .HasColumnType("int");
 
                     b.Property<int>("mascota_id")
                         .HasColumnType("int");
 
-                    b.Property<int>("medicamento")
-                        .HasColumnType("int");
+                    b.Property<string>("medicamento")
+                        .HasColumnType("longtext");
 
                     b.HasKey("id");
 
@@ -135,6 +135,9 @@ namespace VetPet.App.Persistencia.Migrations
                     b.Property<string>("password")
                         .HasColumnType("longtext");
 
+                    b.Property<string>("username")
+                        .HasColumnType("longtext");
+
                     b.HasKey("id");
 
                     b.ToTable("Usuarios");
@@ -153,6 +156,19 @@ namespace VetPet.App.Persistencia.Migrations
                         .HasColumnType("longtext");
 
                     b.HasDiscriminator().HasValue("Propietario");
+                });
+
+            modelBuilder.Entity("VetPet.App.Dominio.Veterinario", b =>
+                {
+                    b.HasBaseType("VetPet.App.Dominio.Persona");
+
+                    b.Property<string>("horario_entrada")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("horario_salida")
+                        .HasColumnType("longtext");
+
+                    b.HasDiscriminator().HasValue("Veterinario");
                 });
 
             modelBuilder.Entity("VetPet.App.Dominio.Admin", b =>

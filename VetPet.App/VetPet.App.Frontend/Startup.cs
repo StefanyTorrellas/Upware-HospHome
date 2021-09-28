@@ -28,6 +28,8 @@ namespace VetPet.App.Frontend
             services.AddSingleton<IRepositorioUsuario>(new RepositorioUsuario(new Context()));
             services.AddSingleton<IRepositorioAdmin>(new RepositorioAdmin(new Context()));
             services.AddSingleton<IRepositorioPropietario>(new RepositorioPropietario(new Context()));
+            services.AddSingleton<IRepositorioVeterinario>(new RepositorioVeterinario(new Context()));
+            services.AddSingleton<IRepositorioMascota>(new RepositorioMascota(new Context()));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

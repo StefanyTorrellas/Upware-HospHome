@@ -149,3 +149,5 @@
 <<<<<<< HEAD
 =======
 >>>>>>> 8dfe2f1d42c8ab09c1dd3b7896f6d38ce5687dff
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/bin/Debug/net5.0/Humanizer.dll
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Design.dll

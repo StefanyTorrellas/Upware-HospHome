@@ -1,4 +1,36 @@
-﻿@page
+﻿@page "/admin/mascotas/list"
 @model VetPet.App.Frontend.Pages.ListMascotasModel
 @{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Sistema de clínica veterinaría";
 }
+<h1>Gestionar Mascotas</h1>
+<p>En está pagina podrás gestionar las mascotas</p>
+<a class="btn btn-primary table-btn" href="/admin/mascotas/add">Agregar mascotas</a>
+<table class="table table-dark">
+    <tr>
+        <th scope="col">Tipo</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Edad</th>
+        <th scope="col">Descripción</th>
+        <th scope="col">Dueño</th>
+    </tr>
+    @foreach(var mascota in Model.mascotas) { 
+     <tr>
+         <td>@mascota.tipo</td>
+         <td>@mascota.nombre</td>
+         <td>@mascota.edad</td>
+         <td>@mascota.descripcion</td>
+         <td>@mascota.propietario_id</td>
+         <td>
+             <a class="btn btn-primary table-btn" href="/admin/propietarios/detail" asp-route-nombre="@mascota.nombre">Ver más</a>
+            <br>
+            <a class="btn btn-primary table-btn" href="/admin/propietarios/edit" asp-route-nombre="@mascota.nombre">Editar</a>
+            <br>
+            <a class="btn btn-primary table-btn" href="/admin/propietarios/delete" asp-route-nombre="@mascota.nombre">Eliminar</a>
+            <br>
+        </td>
+    </tr>
+    }
+
+</table>
