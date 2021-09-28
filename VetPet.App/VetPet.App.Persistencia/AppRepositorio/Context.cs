@@ -23,7 +23,11 @@ namespace VetPet.App.Persistencia
                 var connectionString = "Server=localhost; User=mysql; Password=1234; Database=vetpet";
 		            options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
 */
+<<<<<<< HEAD
                 options.UseSqlServer("Data Source = (localdb \\MSSQLLocalDB; Initial Catalog = VetPet;)");
+=======
+                options.UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = VetPet)");
+>>>>>>> 4ce66f8e07b4a0cadf01b80e90fa3ab91fc84385
             }
         }
 
