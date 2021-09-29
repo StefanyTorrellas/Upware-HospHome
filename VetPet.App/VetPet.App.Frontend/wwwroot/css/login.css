@@ -1,0 +1,20 @@
+body{
+    background: url(https://p4.wallpaperbetter.com/wallpaper/525/411/726/dogs-cats-pets-wallpaper-preview.jpg) no-repeat center center fixed;
+    background-size: conver;
+}  
+
+.main-section{
+    margin:0 auto;
+    margin-top: 25%;
+    padding: 0;
+
+}
+.user-img{
+    margin-top: -50px;
+    margin-bottom: 35px ;
+}
+
+.user-img img{
+    width: 100px;
+    height: 100px;
+}
