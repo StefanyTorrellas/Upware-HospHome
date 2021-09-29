@@ -7,13 +7,13 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using VetPet.App.Dominio;
 using VetPet.App.Persistencia;
 
-namespace VetPet.App.Frontend.Pages
+namespace VetPet.App.Frontend
 {
     public class AddPropietariosModel : PageModel
     {
 
         private readonly IRepositorioPropietario repositorioPropietario;
-        public Propietario propietario{get; set;}
+        public Propietario propietario {get; set;}
         public AddPropietariosModel(IRepositorioPropietario repositorioPropietario) {
             this.repositorioPropietario = repositorioPropietario;
         }
