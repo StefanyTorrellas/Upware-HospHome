@@ -1,39 +1,45 @@
-﻿@page
+﻿@page "/admin/propietarios/list"
 @model VetPet.App.Frontend.ListPropietariosModel
 @using VetPet.App.Dominio
 @{
     Layout = "_AdminLayout";
     ViewData["Title"] = "Sistema de clínica veterinaría";
 }
-<h1>Gestionar Propietarios</h1>
-<p>En está pagina podrás gestionar los dueños de las mascotas</p>
-<a class="btn btn-primary table-btn" href="/admin/propietarios/add">Agregar propietario</a>
-<table class="table table-dark">
-    <tr>
-        <th scope="col">Cedula</th>
-        <th scope="col">Nombre</th>
-        <th scope="col">Edad</th>
-        <th scope="col">Genero</th>
-        <th scope="col">Ciudad</th>
-        <th scope="col">Dirección</th>
-    </tr>
+<a class="h1" data-toggle="tooltip" data-placement="right" title="En está pagina podrás gestionar los dueños de las mascotas">Gestionar Propietarios</a>
+<br>
+<div class="mt-sm-4">
+<a class="btn btn-primary table-btn" href="/admin/propietarios/add">Agregar propietario</a><br>
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead class="thead-dark">
+    	      <tr>
+                <th scope="col">Cedula</th>
+	              <th scope="col">Nombre</th>
+	    	        <th scope="col">Apellido</th>
+            	  <th scope="col">Edad</th>
+            	  <th scope="col">Genero</th>
+            	  <th scope="col">Ciudad</th>
+            	  <th scope="col">Dirección</th>
+	    	<th scope="col">Gestión</th>
+            </tr>
+    	</thead>
     @foreach(var propietario in Model.propietarios) {
     <tr>
         <td>@propietario.cedula</td>
         <td>@propietario.nombre</td>
+	<td>@propietario.apellido</td>
         <td>@propietario.edad</td>
         <td>@propietario.genero</td>
         <td>@propietario.ciudad</td>
         <td>@propietario.direccion</td>
         <td>
-            <a class="btn btn-primary table-btn" href="/admin/propietarios/detail" asp-route-cedula="@propietario.cedula">Ver más</a>
-            <br>
-            <a class="btn btn-primary table-btn" href="/admin/propietarios/edit" asp-route-cedula="@propietario.cedula">Editar</a>
-            <br>
-            <a class="btn btn-primary table-btn" href="/admin/propietarios/delete" asp-route-cedula="@propietario.cedula">Eliminar</a>
-            <br>
+            <a class="btn btn-info table-btn" href="/admin/propietarios/detail"><i class="fa fa-info-circle"></i></a>
+            <a class="btn btn-success table-btn" href="/admin/propietarios/edit"><i class="fa fa-edit"></i></a>
+            <a class="btn btn-danger table-btn" href="/admin/propietarios/delete"><i class='fa fa-trash'></i></a>
         </td>
     </tr>
     }
 
-</table>
+    </table>
+</div>
+</div>

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using VetPet.App.Dominio;
+using Microsoft.EntityFrameworkCore;
 
 namespace VetPet.App.Persistencia
 {
@@ -23,6 +24,7 @@ namespace VetPet.App.Persistencia
         public Cita addCita(Cita cita)
         {
             Cita citaNueva = _context.Add(cita).Entity;
+            _context.SaveChanges();
             return citaNueva;
         }
         
@@ -34,7 +36,7 @@ namespace VetPet.App.Persistencia
                     citaEdicion.id = cita.id;
                     citaEdicion.fecha =  cita.fecha;
                     citaEdicion.hora = cita.hora;
-                    citaEdicion.mascota_id = cita.mascota_id;
+                    citaEdicion.mascota = cita.mascota;
                     _context.SaveChanges();
                 }
             return citaEdicion;  

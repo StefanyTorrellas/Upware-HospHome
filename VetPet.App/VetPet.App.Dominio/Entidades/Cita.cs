@@ -7,6 +7,6 @@ namespace VetPet.App.Dominio {
         public int id {get; set;} 
         public string fecha {get; set;}
         public string hora {get; set;}
-        public int mascota_id {get; set;}        
+        public Mascota mascota {get; set;}
     }
 }

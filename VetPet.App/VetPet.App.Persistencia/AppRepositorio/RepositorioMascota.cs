@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using VetPet.App.Dominio;
+using Microsoft.EntityFrameworkCore;
 
 namespace VetPet.App.Persistencia
 {
@@ -16,13 +17,14 @@ namespace VetPet.App.Persistencia
         // Obtener todas las mascotas
         public IEnumerable<Mascota> getAllMascotas()
         {
-            return _context.Mascotas;
+            return _context.Mascotas.Include("propietario");
         }
 
         // Añadir mascota
         public Mascota addMascota(Mascota mascota)
         {
             Mascota mascotaNueva = _context.Add(mascota).Entity;
+            _context.SaveChanges();
             return mascotaNueva;
         }
         
@@ -36,7 +38,7 @@ namespace VetPet.App.Persistencia
                     mascotaEdicion.nombre = mascota.nombre;
                     mascotaEdicion.edad = mascota.edad;
                     mascotaEdicion.descripcion = mascota.descripcion;
-                    mascotaEdicion.propietario_id = mascota.propietario_id;
+                    mascotaEdicion.propietario = mascota.propietario;
                     _context.SaveChanges();
                 }
             return mascotaEdicion;
@@ -45,7 +47,7 @@ namespace VetPet.App.Persistencia
         // Obtener una mascota
         public Mascota getMascota(int id)
         {
-            return _context.Mascotas.FirstOrDefault(m => m.id == id);
+            return _context.Mascotas.Include("propietario").FirstOrDefault(m => m.id == id);
         }
 
         // Eliminar mascota

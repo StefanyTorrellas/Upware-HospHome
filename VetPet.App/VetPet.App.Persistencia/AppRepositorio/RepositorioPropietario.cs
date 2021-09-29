@@ -23,6 +23,7 @@ namespace VetPet.App.Persistencia
         public Propietario addPropietario(Propietario propietario)
         {
             Propietario propietarioNuevo = _context.Add(propietario).Entity;
+	    _context.SaveChanges();
             return propietarioNuevo;
         }
         

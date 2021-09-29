@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "/admin/propietarios/add"
 @model VetPet.App.Frontend.AddPropietariosModel
 @using VetPet.App.Dominio
 @{
@@ -16,6 +16,10 @@
         <label asp-for="propietario.nombre" class="col-sm-2">Nombre</label>
         <input asp-for="propietario.nombre" class="form-control" value="">
     </div>   
+    <div class="form-group row">
+	<label asp-for="propietario.apellido" class="col-sm-2">Apellido</label>
+	<input asp-for="propietario.apellido" class="form-control" value="">
+    </div>
     <div class="form-group row">
         <label asp-for="propietario.edad" class="col-sm-2">Edad</label>
         <input asp-for="propietario.edad" class="form-control" value="">
@@ -38,7 +42,7 @@
         <input asp-for="propietario.direccion" class="form-control" value="" required>
     </div>  
     <div class="form-group row">
-        <button type="submit" class="btn btn-primary">Guardar</button>
-        <a asp-page="/admin/propietarios/list" class="btn btn-primary">Cancelar</a>
+        <button type="submit" name="submit" formmethod="post" class="btn btn-primary">Guardar</button>
+        <a asp-page="/Admin/Propietarios/ListPropietarios" class="btn btn-primary">Cancelar</a>
     </div>
 </form>

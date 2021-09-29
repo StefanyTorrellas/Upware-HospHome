@@ -9,6 +9,8 @@ namespace VetPet.App.Consola
         static void Main(string[] args)
         {
             IRepositorioPropietario repositorioPropietario = new RepositorioPropietario(new Context());
+            IRepositorioVeterinario repositorioVeterinario = new RepositorioVeterinario(new Context());
+            IRepositorioMascota repositorioMascota = new RepositorioMascota(new Context());
         }
     }
 }

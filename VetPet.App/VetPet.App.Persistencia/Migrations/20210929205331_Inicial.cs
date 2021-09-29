@@ -48,26 +48,6 @@ namespace VetPet.App.Persistencia.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "Mascotas",
-                columns: table => new
-                {
-                    id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    tipo = table.Column<int>(type: "int", nullable: false),
-                    nombre = table.Column<string>(type: "longtext", nullable: true)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    edad = table.Column<int>(type: "int", nullable: false),
-                    descripcion = table.Column<string>(type: "longtext", nullable: true)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    propietario_id = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Mascotas", x => x.id);
-                })
-                .Annotation("MySql:CharSet", "utf8mb4");
-
-            migrationBuilder.CreateTable(
                 name: "Personas",
                 columns: table => new
                 {
@@ -75,6 +55,8 @@ namespace VetPet.App.Persistencia.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     cedula = table.Column<int>(type: "int", nullable: false),
                     nombre = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    apellido = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     edad = table.Column<int>(type: "int", nullable: false),
                     genero = table.Column<int>(type: "int", nullable: false),
@@ -117,6 +99,37 @@ namespace VetPet.App.Persistencia.Migrations
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
+            migrationBuilder.CreateTable(
+                name: "Mascotas",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    tipo = table.Column<int>(type: "int", nullable: false),
+                    nombre = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    edad = table.Column<int>(type: "int", nullable: false),
+                    descripcion = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    propietarioid = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Mascotas", x => x.id);
+                    table.ForeignKey(
+                        name: "FK_Mascotas_Personas_propietarioid",
+                        column: x => x.propietarioid,
+                        principalTable: "Personas",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Mascotas_propietarioid",
+                table: "Mascotas",
+                column: "propietarioid");
+
             migrationBuilder.CreateIndex(
                 name: "IX_Personas_cedula",
                 table: "Personas",
@@ -136,10 +149,10 @@ namespace VetPet.App.Persistencia.Migrations
                 name: "Mascotas");
 
             migrationBuilder.DropTable(
-                name: "Personas");
+                name: "Usuarios");
 
             migrationBuilder.DropTable(
-                name: "Usuarios");
+                name: "Personas");
         }
     }
 }

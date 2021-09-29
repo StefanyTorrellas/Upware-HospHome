@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.TagHelpers;
 using VetPet.App.Dominio;
 using VetPet.App.Persistencia;
 
@@ -24,20 +25,20 @@ namespace VetPet.App.Frontend
         }
 
         public IActionResult OnPost(Propietario propietario) {
-//	    if (ModelState.IsValid)
-//	    {
+	        if (ModelState.IsValid)
+            {
             	try {
                     repositorioPropietario.addPropietario(propietario);
-                    return RedirectToPage("/Admin/Propietarios/ListPropietarios");
+                    return Redirect("/admin/propietarios/list");
                 }
-                catch {
+                catch (Exception e){
+                    Console.WriteLine(e);
                     return RedirectToPage("/Error");
                 }
             }
-/*	    else 
-            {
-		return Page();
+    	    else {
+		        return Page();
             }
-        } */
+        }
     }
 }
