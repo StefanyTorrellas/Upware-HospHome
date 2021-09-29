@@ -1,1 +1,8 @@
 .vscode
+VetPet.App/VetPet.App.Persistencia/obj/*
+VetPet.App/VetPet.App.Persistencia/bin/*
+VetPet.App/VetPet.App.Frontend/bin/*
+VetPet.App/VetPet.App.Dominio/bin/*
+VetPet.App/VetPet.App.Dominio/obj/*
+VetPet.App/VetPet.App.Frontend/obj/*
+VetPet.App/VetPet.App.Persistencia/obj/*
