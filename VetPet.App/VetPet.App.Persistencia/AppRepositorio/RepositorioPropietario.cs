@@ -30,7 +30,7 @@ namespace VetPet.App.Persistencia
         // Editar propietario
         public Propietario editPropietario(Propietario propietario)
         {
-            Propietario propietarioEdicion = _context.Propietarios.FirstOrDefault(p => p.id == propietario.id);
+            Propietario propietarioEdicion = _context.Propietarios.FirstOrDefault(p => p.cedula == propietario.cedula);
                 if(propietarioEdicion != null) {
                     propietarioEdicion.cedula = propietario.cedula;
                     propietarioEdicion.nombre = propietario.nombre;

@@ -9,8 +9,8 @@ using VetPet.App.Persistencia;
 namespace VetPet.App.Persistencia.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20210929205331_Inicial")]
-    partial class Inicial
+    [Migration("20211004170250_InicialMySql3")]
+    partial class InicialMySql3
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -31,10 +31,12 @@ namespace VetPet.App.Persistencia.Migrations
                     b.Property<string>("hora")
                         .HasColumnType("longtext");
 
-                    b.Property<int>("mascota_id")
+                    b.Property<int?>("mascotaid")
                         .HasColumnType("int");
 
                     b.HasKey("id");
+
+                    b.HasIndex("mascotaid");
 
                     b.ToTable("Citas");
                 });
@@ -48,16 +50,20 @@ namespace VetPet.App.Persistencia.Migrations
                     b.Property<string>("anotaciones")
                         .HasColumnType("longtext");
 
-                    b.Property<int>("cita_id")
+                    b.Property<int?>("citaid")
                         .HasColumnType("int");
 
-                    b.Property<int>("mascota_id")
+                    b.Property<int?>("mascotaid")
                         .HasColumnType("int");
 
                     b.Property<string>("medicamento")
                         .HasColumnType("longtext");
 
                     b.HasKey("id");
+
+                    b.HasIndex("citaid");
+
+                    b.HasIndex("mascotaid");
 
                     b.ToTable("HistoriasClinicas");
                 });
@@ -187,13 +193,42 @@ namespace VetPet.App.Persistencia.Migrations
                     b.HasDiscriminator().HasValue("Admin");
                 });
 
+            modelBuilder.Entity("VetPet.App.Dominio.Cita", b =>
+                {
+                    b.HasOne("VetPet.App.Dominio.Mascota", "mascota")
+                        .WithMany()
+                        .HasForeignKey("mascotaid");
+
+                    b.Navigation("mascota");
+                });
+
+            modelBuilder.Entity("VetPet.App.Dominio.HistoriaClinica", b =>
+                {
+                    b.HasOne("VetPet.App.Dominio.Cita", "cita")
+                        .WithMany()
+                        .HasForeignKey("citaid");
+
+                    b.HasOne("VetPet.App.Dominio.Mascota", "mascota")
+                        .WithMany()
+                        .HasForeignKey("mascotaid");
+
+                    b.Navigation("cita");
+
+                    b.Navigation("mascota");
+                });
+
             modelBuilder.Entity("VetPet.App.Dominio.Mascota", b =>
                 {
                     b.HasOne("VetPet.App.Dominio.Propietario", "propietario")
-                        .WithMany()
+                        .WithMany("mascotas")
                         .HasForeignKey("propietarioid");
 
                     b.Navigation("propietario");
+                });
+
+            modelBuilder.Entity("VetPet.App.Dominio.Propietario", b =>
+                {
+                    b.Navigation("mascotas");
                 });
 #pragma warning restore 612, 618
         }

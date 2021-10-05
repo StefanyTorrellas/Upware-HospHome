@@ -140,3 +140,6 @@
 >>>>>>> 8dfe2f1d42c8ab09c1dd3b7896f6d38ce5687dff
 /home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/bin/Debug/net5.0/Humanizer.dll
 /home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Design.dll
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/Admin/Propietarios/EditPropietarios.cshtml.g.cs
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/Admin/Mascotas/DetailMascotas.cshtml.g.cs
+/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/Admin/Mascotas/RemoveMascotas.cshtml.g.cs

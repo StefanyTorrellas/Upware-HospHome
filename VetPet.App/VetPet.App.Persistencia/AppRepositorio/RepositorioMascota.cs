@@ -50,10 +50,26 @@ namespace VetPet.App.Persistencia
             return _context.Mascotas.Include("propietario").FirstOrDefault(m => m.id == id);
         }
 
+        //Obtener una mascota por cedula de propietario
+        public Mascota getMascotaP(int cedula)
+        {
+            return _context.Mascotas.Include("propietario").FirstOrDefault(m => m.propietario.cedula == cedula);
+        }
+
         // Eliminar mascota
         public void removeMascota(int id)
         {
             Mascota mascotaEliminar = _context.Mascotas.FirstOrDefault(m => m.id == id);
+            if (mascotaEliminar != null) {
+                _context.Mascotas.Remove(mascotaEliminar);
+                _context.SaveChanges();
+            }
+        }
+
+        // Eliminar mascota con cedula de propietario
+        public void removeMascotaP(int cedula)
+        {
+            Mascota mascotaEliminar = _context.Mascotas.FirstOrDefault(m => m.propietario.cedula == cedula);
             if (mascotaEliminar != null) {
                 _context.Mascotas.Remove(mascotaEliminar);
                 _context.SaveChanges();

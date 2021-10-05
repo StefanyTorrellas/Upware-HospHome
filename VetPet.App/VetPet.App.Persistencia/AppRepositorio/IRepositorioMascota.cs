@@ -9,6 +9,8 @@ namespace VetPet.App.Persistencia
         Mascota addMascota(Mascota mascota);
         Mascota editMascota(Mascota mascota);
         Mascota getMascota(int id);
+        Mascota getMascotaP(int cedula);
         void removeMascota(int id);
+        void removeMascotaP(int cedula);
     }
 }

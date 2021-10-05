@@ -20,22 +20,22 @@
             	  <th scope="col">Genero</th>
             	  <th scope="col">Ciudad</th>
             	  <th scope="col">Dirección</th>
-	    	<th scope="col">Gestión</th>
+		            <th scope="col">Gestión</th>
             </tr>
     	</thead>
     @foreach(var propietario in Model.propietarios) {
     <tr>
         <td>@propietario.cedula</td>
         <td>@propietario.nombre</td>
-	<td>@propietario.apellido</td>
+        <td>@propietario.apellido</td>
         <td>@propietario.edad</td>
         <td>@propietario.genero</td>
         <td>@propietario.ciudad</td>
         <td>@propietario.direccion</td>
         <td>
-            <a class="btn btn-info table-btn" href="/admin/propietarios/detail"><i class="fa fa-info-circle"></i></a>
-            <a class="btn btn-success table-btn" href="/admin/propietarios/edit"><i class="fa fa-edit"></i></a>
-            <a class="btn btn-danger table-btn" href="/admin/propietarios/delete"><i class='fa fa-trash'></i></a>
+            <a class="btn btn-info table-btn" data-toggle="tooltip" data-placement="right" title="Ver más" asp-page="/Admin/Propietarios/DetailPropietarios" asp-route-cedula="@propietario.cedula"><i class="fa fa-info-circle"></i></a>
+            <a class="btn btn-success table-btn" data-toggle="tooltip" data-placement="right" title="Editar" asp-page="/Admin/Propietarios/EditPropietarios" asp-route-cedula="@propietario.cedula"><i class="fa fa-edit"></i></a>
+            <a class="btn btn-danger table-btn" data-toggle="tooltip" data-placement="right" title="Eliminar" asp-page="/Admin/Propietarios/RemovePropietarios" asp-route-cedula="@propietario.cedula"><i class='fa fa-trash'></i></a>
         </td>
     </tr>
     }

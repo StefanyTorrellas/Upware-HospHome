@@ -3,48 +3,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace VetPet.App.Persistencia.Migrations
 {
-    public partial class Inicial : Migration
+    public partial class InicialMySql : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AlterDatabase()
-                .Annotation("MySql:CharSet", "utf8mb4");
-
-            migrationBuilder.CreateTable(
-                name: "Citas",
-                columns: table => new
-                {
-                    id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    fecha = table.Column<string>(type: "longtext", nullable: true)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    hora = table.Column<string>(type: "longtext", nullable: true)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    mascota_id = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Citas", x => x.id);
-                })
-                .Annotation("MySql:CharSet", "utf8mb4");
-
-            migrationBuilder.CreateTable(
-                name: "HistoriasClinicas",
-                columns: table => new
-                {
-                    id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    mascota_id = table.Column<int>(type: "int", nullable: false),
-                    anotaciones = table.Column<string>(type: "longtext", nullable: true)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    cita_id = table.Column<int>(type: "int", nullable: false),
-                    medicamento = table.Column<string>(type: "longtext", nullable: true)
-                        .Annotation("MySql:CharSet", "utf8mb4")
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_HistoriasClinicas", x => x.id);
-                })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
@@ -125,6 +88,76 @@ namespace VetPet.App.Persistencia.Migrations
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
+            migrationBuilder.CreateTable(
+                name: "Citas",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    fecha = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    hora = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    mascotaid = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Citas", x => x.id);
+                    table.ForeignKey(
+                        name: "FK_Citas_Mascotas_mascotaid",
+                        column: x => x.mascotaid,
+                        principalTable: "Mascotas",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "HistoriasClinicas",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    mascotaid = table.Column<int>(type: "int", nullable: true),
+                    anotaciones = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    citaid = table.Column<int>(type: "int", nullable: true),
+                    medicamento = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_HistoriasClinicas", x => x.id);
+                    table.ForeignKey(
+                        name: "FK_HistoriasClinicas_Citas_citaid",
+                        column: x => x.citaid,
+                        principalTable: "Citas",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_HistoriasClinicas_Mascotas_mascotaid",
+                        column: x => x.mascotaid,
+                        principalTable: "Mascotas",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Citas_mascotaid",
+                table: "Citas",
+                column: "mascotaid");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_HistoriasClinicas_citaid",
+                table: "HistoriasClinicas",
+                column: "citaid");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_HistoriasClinicas_mascotaid",
+                table: "HistoriasClinicas",
+                column: "mascotaid");
+
             migrationBuilder.CreateIndex(
                 name: "IX_Mascotas_propietarioid",
                 table: "Mascotas",
@@ -140,16 +173,16 @@ namespace VetPet.App.Persistencia.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Citas");
-
-            migrationBuilder.DropTable(
                 name: "HistoriasClinicas");
 
             migrationBuilder.DropTable(
-                name: "Mascotas");
+                name: "Usuarios");
 
             migrationBuilder.DropTable(
-                name: "Usuarios");
+                name: "Citas");
+
+            migrationBuilder.DropTable(
+                name: "Mascotas");
 
             migrationBuilder.DropTable(
                 name: "Personas");

@@ -4,36 +4,28 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.TagHelpers;
 using VetPet.App.Dominio;
 using VetPet.App.Persistencia;
 
 namespace VetPet.App.Frontend
 {
-    public class RemovePropietariosModel : PageModel
+    public class EditPropietariosModel : PageModel
     {
-
         private readonly IRepositorioPropietario repositorioPropietario;
         public Propietario propietario {get; set;}
-
-	      private readonly IRepositorioMascota repositorioMascota;
-	      public Mascota mascota {get; set;}
-
-        public RemovePropietariosModel (IRepositorioPropietario repositorioPropietario, IRepositorioMascota repositorioMascota) {
+        public EditPropietariosModel(IRepositorioPropietario repositorioPropietario) {
             this.repositorioPropietario = repositorioPropietario;
-            this.repositorioMascota = repositorioMascota;	
         }
-
         public void OnGet(int cedula)
         {
             propietario = repositorioPropietario.getPropietario(cedula);
-            mascota = repositorioMascota.getMascotaP(cedula);
         }
-
         public IActionResult OnPost(Propietario propietario) {
-            if (ModelState.IsValid) {
+            if (ModelState.IsValid)
+            {
                 try {
-                    repositorioMascota.removeMascotaP(propietario.cedula);
-                    repositorioPropietario.removePropietario(propietario.cedula);
+                    repositorioPropietario.editPropietario(propietario);
                     return Redirect("/admin/propietarios/list");
                 }
                 catch (Exception e) {

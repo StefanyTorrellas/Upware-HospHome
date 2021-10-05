@@ -2,7 +2,6 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using VetPet.App.Persistencia;
@@ -10,29 +9,27 @@ using VetPet.App.Persistencia;
 namespace VetPet.App.Persistencia.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20210929215141_Inicial2")]
-    partial class Inicial2
+    [Migration("20211004180357_InicialMySql4")]
+    partial class InicialMySql4
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.10")
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("Relational:MaxIdentifierLength", 64)
+                .HasAnnotation("ProductVersion", "5.0.10");
 
             modelBuilder.Entity("VetPet.App.Dominio.Cita", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<string>("fecha")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("hora")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<int?>("mascotaid")
                         .HasColumnType("int");
@@ -48,22 +45,25 @@ namespace VetPet.App.Persistencia.Migrations
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("anotaciones")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("cita_id")
                         .HasColumnType("int");
 
-                    b.Property<int>("mascota_id")
+                    b.Property<string>("anotaciones")
+                        .HasColumnType("longtext");
+
+                    b.Property<int?>("citaid")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("mascotaid")
                         .HasColumnType("int");
 
                     b.Property<string>("medicamento")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.HasKey("id");
+
+                    b.HasIndex("citaid");
+
+                    b.HasIndex("mascotaid");
 
                     b.ToTable("HistoriasClinicas");
                 });
@@ -72,17 +72,16 @@ namespace VetPet.App.Persistencia.Migrations
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<string>("descripcion")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<int>("edad")
                         .HasColumnType("int");
 
                     b.Property<string>("nombre")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<int?>("propietarioid")
                         .HasColumnType("int");
@@ -101,15 +100,14 @@ namespace VetPet.App.Persistencia.Migrations
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<string>("Discriminator")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("apellido")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<int>("cedula")
                         .HasColumnType("int");
@@ -121,7 +119,7 @@ namespace VetPet.App.Persistencia.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("nombre")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.HasKey("id");
 
@@ -137,21 +135,20 @@ namespace VetPet.App.Persistencia.Migrations
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<string>("Discriminator")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("email")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("password")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("username")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.HasKey("id");
 
@@ -165,10 +162,10 @@ namespace VetPet.App.Persistencia.Migrations
                     b.HasBaseType("VetPet.App.Dominio.Persona");
 
                     b.Property<string>("ciudad")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("direccion")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.HasDiscriminator().HasValue("Propietario");
                 });
@@ -178,10 +175,10 @@ namespace VetPet.App.Persistencia.Migrations
                     b.HasBaseType("VetPet.App.Dominio.Persona");
 
                     b.Property<string>("horario_entrada")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("horario_salida")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.HasDiscriminator().HasValue("Veterinario");
                 });
@@ -201,6 +198,21 @@ namespace VetPet.App.Persistencia.Migrations
                     b.HasOne("VetPet.App.Dominio.Mascota", "mascota")
                         .WithMany()
                         .HasForeignKey("mascotaid");
+
+                    b.Navigation("mascota");
+                });
+
+            modelBuilder.Entity("VetPet.App.Dominio.HistoriaClinica", b =>
+                {
+                    b.HasOne("VetPet.App.Dominio.Cita", "cita")
+                        .WithMany()
+                        .HasForeignKey("citaid");
+
+                    b.HasOne("VetPet.App.Dominio.Mascota", "mascota")
+                        .WithMany()
+                        .HasForeignKey("mascotaid");
+
+                    b.Navigation("cita");
 
                     b.Navigation("mascota");
                 });

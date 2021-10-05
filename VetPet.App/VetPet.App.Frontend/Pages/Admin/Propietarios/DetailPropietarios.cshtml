@@ -1,4 +1,17 @@
-﻿@page
+﻿@page "/admin/propietarios/detail"
 @model VetPet.App.Frontend.DetailPropietariosModel
 @{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Sistema de clínica veterinaría";
 }
+
+<a class="h1" data-toggle="tooltip" data-placement="right" title="En está pagina podrás ver los detalles del propietario.">@Model.propietario.nombre @Model.propietario.apellido</a>
+<ul>
+    <li>Cedula: @Model.propietario.cedula</li>
+    <li>Nombre: @Model.propietario.nombre</li>
+    <li>Apellido: @Model.propietario.apellido</li>
+    <li>Edad: @Model.propietario.edad</li>
+    <li>Genero: @Model.propietario.genero</li>
+    <li>Ciudad: @Model.propietario.ciudad</li>
+    <li>Dirección: @Model.propietario.direccion</li>
+</ul>
