@@ -23,6 +23,7 @@ namespace VetPet.App.Persistencia
         public Veterinario addVeterinario(Veterinario veterinario)
         {
             Veterinario veterinarioNuevo = _context.Add(veterinario).Entity;
+            _context.SaveChanges();
             return veterinarioNuevo;
         }
 

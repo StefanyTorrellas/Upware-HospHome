@@ -1,4 +1,20 @@
 ﻿@page "/admin/mascotas/detail"
 @model VetPet.App.Frontend.DetailMascotasModel
+@using VetPet.App.Dominio
 @{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Sistema de clínica veterinaría";
 }
+<a class="h1" data-toggle="tooltip" data-placement="right" title="En está pagina podrás ver los detalles de la mascota">@Model.mascota.nombre</a>
+<ul>
+    <li>Tipo: @Model.mascota.tipo</li>
+    <li>Nombre: @Model.mascota.nombre</li>
+    <li>Edad: @Model.mascota.edad</li>
+    <li>Descripción: @Model.mascota.descripcion</li>
+    @if (@Model.mascota.propietario != null) {
+    <li>Dueño: @Model.mascota.propietario.nombre @Model.mascota.propietario.apellido</li>
+    }
+    else {
+    <li>Estado: Sin dueño :(</li>
+    }
+</ul>

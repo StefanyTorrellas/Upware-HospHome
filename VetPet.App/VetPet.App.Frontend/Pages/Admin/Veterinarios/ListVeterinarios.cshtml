@@ -1,0 +1,45 @@
+﻿@page "/admin/veterinarios/list"
+@model VetPet.App.Frontend.ListVeterinariosModel
+@using VetPet.App.Dominio
+@{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Sistema de clínica veterinaría";
+}
+<a class="h1" data-toggle="tooltip" data-placement="right" title="En está pagina podrás gestionar los veterinarios">Gestionar Veterinarios</a>
+<br>
+<div class="mt-sm-4">
+<a class="btn btn-primary table-btn" href="/admin/veterinarios/add">Agregar veterinario</a><br>
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead class="thead-dark">
+    	      <tr>
+                <th scope="col">Cedula</th>
+	              <th scope="col">Nombre</th>
+	    	        <th scope="col">Apellido</th>
+            	  <th scope="col">Edad</th>
+            	  <th scope="col">Genero</th>
+            	  <th scope="col">Hora Entrada</th>
+            	  <th scope="col">Hora Salida</th>
+		            <th scope="col">Gestión</th>
+            </tr>
+    	</thead>
+    @foreach(var veterinario in Model.veterinarios) {
+    <tr>
+        <td>@veterinario.cedula</td>
+        <td>@veterinario.nombre</td>
+        <td>@veterinario.apellido</td>
+        <td>@veterinario.edad</td>
+        <td>@veterinario.genero</td>
+        <td>@veterinario.horario_entrada</td>
+        <td>@veterinario.horario_salida</td>
+        <td>
+            <a class="btn btn-info table-btn" data-toggle="tooltip" data-placement="right" title="Ver más" asp-page="/Admin/Propietarios/DetailVeterinarios" asp-route-cedula="@veterinario.cedula"><i class="fa fa-info-circle"></i></a>
+            <a class="btn btn-success table-btn" data-toggle="tooltip" data-placement="right" title="Editar" asp-page="/Admin/Propietarios/EditVeterinarios" asp-route-cedula="@veterinario.cedula"><i class="fa fa-edit"></i></a>
+            <a class="btn btn-danger table-btn" data-toggle="tooltip" data-placement="right" title="Eliminar" asp-page="/Admin/Propietarios/RemoveVeterinarios" asp-route-cedula="@veterinario.cedula"><i class='fa fa-trash'></i></a>
+        </td>
+    </tr>
+    }
+
+    </table>
+</div>
+</div>

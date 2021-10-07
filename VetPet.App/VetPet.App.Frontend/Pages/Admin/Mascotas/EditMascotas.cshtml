@@ -1,4 +1,44 @@
 ﻿@page "/admin/mascotas/edit"
 @model VetPet.App.Frontend.EditMascotasModel
+@using VetPet.App.Dominio
 @{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Sistema de clínica veterinaría";
 }
+<h1>@Model.mascota.nombre</h1>
+<form method="post" class="mt-3">
+    <input hidden asp-for="mascota.id"/>
+    <input hidden asp-for="mascota.propietario">
+    <div class="form-group row">
+        <label asp-for="mascota.nombre" class="col-sm-2">Nombre</label>
+        <input asp-for="mascota.nombre" class="form-control" value="">
+        <span class="text-danger" asp-validation-for="mascota.nombre"></span>
+    </div>  
+    <div class="form-group row">
+        <label asp-for="mascota.tipo" class="col-sm-2">Tipo</label>
+        <div class="col-sm-10">
+            <select asp-for="mascota.tipo" asp-items="Html.GetEnumSelectList<Tipo>()"></select>
+        </div>
+        <span class="text-danger" asp-validation-for="mascota.tipo"></span>
+    </div>
+    <div class="form-group row">
+        <label asp-for="mascota.edad" class="col-sm-2">Edad</label>
+        <input asp-for="mascota.edad" class="form-control" value="">
+        <span class="text-danger" asp-validation-for="mascota.edad"></span>
+    </div>  
+
+    <div class="form-group row">
+        <label asp-for="mascota.descripcion" class="col-sm-2">Descripción</label>
+        <input asp-for="mascota.descripcion" class="form-control" value="">
+        <span class="text-danger" asp-validation-for="mascota.descripcion"></span>
+    </div>  
+    <div class="form-group row">
+        <label asp-for="cedulaPropietario" class="col-sm-2"> Cédula Propietario</label>
+        <input asp-for="cedulaPropietario" class="Model.propietarios" value="" required>
+        <span class="text-danger" asp-validation-for="cedulaPropietario"></span>
+    </div>  
+    <div class="form-group row">
+        <button type="submit" name="submit" class="btn btn-primary">Editar</button>
+        <a asp-page="/Admin/Propietarios/ListPropietarios" class="btn btn-primary">Cancelar</a>
+    </div>
+</form>

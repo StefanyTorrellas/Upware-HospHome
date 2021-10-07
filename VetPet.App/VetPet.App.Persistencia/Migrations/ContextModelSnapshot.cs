@@ -23,11 +23,14 @@ namespace VetPet.App.Persistencia.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("dia")
+                        .HasColumnType("datetime(6)");
+
                     b.Property<string>("fecha")
                         .HasColumnType("longtext");
 
-                    b.Property<string>("hora")
-                        .HasColumnType("longtext");
+                    b.Property<DateTime>("hora")
+                        .HasColumnType("datetime(6)");
 
                     b.Property<int?>("mascotaid")
                         .HasColumnType("int");
@@ -140,15 +143,22 @@ namespace VetPet.App.Persistencia.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("email")
+                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("password")
-                        .HasColumnType("longtext");
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
 
                     b.Property<string>("username")
-                        .HasColumnType("longtext");
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
 
                     b.HasKey("id");
+
+                    b.HasIndex("username")
+                        .IsUnique();
 
                     b.ToTable("Usuarios");
 
@@ -172,11 +182,11 @@ namespace VetPet.App.Persistencia.Migrations
                 {
                     b.HasBaseType("VetPet.App.Dominio.Persona");
 
-                    b.Property<string>("horario_entrada")
-                        .HasColumnType("longtext");
+                    b.Property<DateTime>("horario_entrada")
+                        .HasColumnType("datetime(6)");
 
-                    b.Property<string>("horario_salida")
-                        .HasColumnType("longtext");
+                    b.Property<DateTime>("horario_salida")
+                        .HasColumnType("datetime(6)");
 
                     b.HasDiscriminator().HasValue("Veterinario");
                 });
@@ -184,9 +194,6 @@ namespace VetPet.App.Persistencia.Migrations
             modelBuilder.Entity("VetPet.App.Dominio.Admin", b =>
                 {
                     b.HasBaseType("VetPet.App.Dominio.Usuario");
-
-                    b.Property<int>("key")
-                        .HasColumnType("int");
 
                     b.HasDiscriminator().HasValue("Admin");
                 });

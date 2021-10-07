@@ -1,4 +1,36 @@
 ﻿@page "/admin/mascotas/delete"
 @model VetPet.App.Frontend.RemoveMascotasModel
+@using VetPet.App.Dominio
 @{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Sistema de clínica veterinaría";
 }
+<h1>Eliminar mascota @Model.mascota.nombre</h1>
+<form method="post" class="mt-3">
+    <input hidden asp-for="mascota.id">
+    <div class="form-group row">
+        <button type="button"  data-toggle="modal" data-target="#confirmacion" class="btn btn-primary">Eliminar</button>
+        <a class="btn btn-primary" asp-page="/Admin/Propietarios/ListPropietarios">Cancelar</a>
+
+        <!-- Confirmation -->
+        <div class="modal fade" id="confirmacion" tabindex="-1" role="dialog" aria-labelledby="confirmacion" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="confirmacion">Eliminar</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Deseas eliminar a la mascota @Model.mascota.nombre del propietario @Model.mascota.propietario.nombre @Model.mascota.propietario.apellido
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

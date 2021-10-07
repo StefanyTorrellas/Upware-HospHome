@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using VetPet.App.Dominio;
 using VetPet.App.Persistencia;
 
-
 namespace VetPet.App.Frontend
 {
     public class DetailPropietariosModel : PageModel

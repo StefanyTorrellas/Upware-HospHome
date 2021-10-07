@@ -4,6 +4,6 @@ namespace VetPet.App.Dominio
 {
     public class Admin : Usuario
     {
-        public int key {get; set;}
+        public int key = 1234;
     }
 }

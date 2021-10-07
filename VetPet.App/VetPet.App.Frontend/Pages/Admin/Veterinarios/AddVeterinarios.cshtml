@@ -1,0 +1,49 @@
+﻿@page "/admin/veterinarios/add"
+@model VetPet.App.Frontend.AddVeterinariosModel
+@using VetPet.App.Dominio
+@{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Sistema de clínica veterinaría";
+}
+<h1>Agregar veterinario</h1>
+<form method="post" class="mt-3">
+    <input hidden asp-for="veterinario.id"/>
+    <div class="form-group row">
+        <label asp-for="veterinario.cedula" class="col-sm-2">Cédula</label>
+        <input asp-for="veterinario.cedula" class="form-control" value="" required>
+    </div>
+    <div class="form-group row">
+        <label asp-for="veterinario.nombre" class="col-sm-2">Nombre</label>
+        <input asp-for="veterinario.nombre" class="form-control" value="">
+    </div>   
+    <div class="form-group row">
+	<label asp-for="veterinario.apellido" class="col-sm-2">Apellido</label>
+	<input asp-for="veterinario.apellido" class="form-control" value="">
+    </div>
+    <div class="form-group row">
+        <label asp-for="veterinario.edad" class="col-sm-2">Edad</label>
+        <input asp-for="veterinario.edad" class="form-control" value="">
+    </div>  
+    <div class="form-group row">
+        <label asp-for="veterinario.genero" class="col-sm-2">Genero</label>
+        <!--<input asp-for="veterinario.genero" class="form-control" value="">-->
+        <div class="col-sm-10">
+            <select asp-for="veterinario.genero" asp-items="Html.GetEnumSelectList<Genero>()"></select>
+        </div>
+        
+    </div>  
+    <div class="form-group row">
+        <label asp-for="veterinario.horario_entrada" class="col-sm-2">horario_entrada</label>
+        <input asp-for="veterinario.horario_entrada" class="form-control" value="">
+        <span asp-validation-for="veterinario.horario_entrada" class="text-danger"></span>
+    </div>
+    <div class="form-group row">
+        <label asp-for="veterinario.horario_salida" class="col-sm-2">horario_salida</label>
+        <input asp-for="veterinario.horario_salida" class="form-control" value="" required>
+        <span asp-validation-for="veterinario.horario_salida" class="text-danger"></span>
+    </div>  
+    <div class="form-group row">
+        <button type="submit" name="submit" formmethod="post" class="btn btn-primary">Guardar</button>
+        <a asp-page="/Admin/Propietarios/ListPropietarios" class="btn btn-primary">Cancelar</a>
+    </div>
+</form>

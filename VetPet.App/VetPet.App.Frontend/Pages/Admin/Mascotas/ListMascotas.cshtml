@@ -30,9 +30,9 @@
         <td>@if(mascota.propietario == null) {@Model.message} 
             else {@mascota.propietario.nombre; @Model.space; @mascota.propietario.apellido;}</td>
         <td>
-            <a class="btn btn-info table-btn" href="/admin/propietarios/detail"><i class="fa fa-info-circle"></i></a>
-            <a class="btn btn-success table-btn" href="/admin/propietarios/edit"><i class="fa fa-edit"></i></a>
-            <a class="btn btn-danger table-btn" href="/admin/propietarios/delete"><i class='fa fa-trash'></i></a>
+            <a class="btn btn-info table-btn" asp-page="/Admin/Mascotas/DetailMascotas" asp-route-id="@mascota.id"><i class="fa fa-info-circle"></i></a>
+            <a class="btn btn-success table-btn" asp-page="/Admin/Mascotas/EditMascotas" asp-route-id="@mascota.id"><i class="fa fa-edit"></i></a>
+            <a class="btn btn-danger table-btn" asp-page="/Admin/Mascotas/delete" asp-route-id="@mascota.id"><i class='fa fa-trash'></i></a>
         </td>
     </tr>
     }
