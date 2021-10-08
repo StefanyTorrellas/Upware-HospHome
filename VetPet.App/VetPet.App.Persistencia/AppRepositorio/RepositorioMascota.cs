@@ -38,7 +38,7 @@ namespace VetPet.App.Persistencia
                     mascotaEdicion.nombre = mascota.nombre;
                     mascotaEdicion.edad = mascota.edad;
                     mascotaEdicion.descripcion = mascota.descripcion;
-                    mascotaEdicion.propietario.cedula = mascota.propietario.cedula;
+                    mascotaEdicion.propietario = mascota.propietario;
                     _context.SaveChanges();
                 }
             return mascotaEdicion;
