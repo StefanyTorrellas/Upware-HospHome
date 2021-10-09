@@ -1,0 +1,12 @@
+﻿@page "/admin/gestion"
+@model VetPet.App.Frontend.GestionModel
+@{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Sistema de clínica veterinaría";
+}
+<div class="text-center">
+    <h1 class="display-4">Gestión</h1>
+    <p>Acá podrás gestionar las historias y las citas.</p>
+    <a class="btn btn-success" href="/admin/citas/list">Citas</a>
+    <a class="btn btn-info" href="/admin/historias/list">Historias</a>
+</div>

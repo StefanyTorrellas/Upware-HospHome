@@ -1,0 +1,41 @@
+﻿@page "/admin/anotaciones/list"
+@model VetPet.App.Frontend.ListAnotacionesModel
+@using VetPet.App.Dominio
+@{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Sistema de clínica veterinaría";
+}
+<a class="h1" data-toggle="tooltip" data-placement="right" title="En está pagina podrás gestionar las anotaciones">Gestionar Anotaciones</a>
+<br>
+<div class="mt-sm-4">
+<a class="btn btn-primary table-btn" href="/admin/anotaciones/add">Agregar anotaciones</a>
+<div class="table-responsive">
+<table class="table table-hover">
+    <thead class="thead-dark">
+        <tr>
+        <th scope="col">Fecha</th>
+        <th scope="col">Propietario</th>
+        <th scope="col">Veterinario</th>
+        <th scope="col">Descripción</th>
+        <th scope="col">Medicamento</th>
+	    <th scope="col">Gestión</th>
+        </tr>
+    </thead>
+    @foreach(var anotacion in Model.anotaciones) { 
+     <tr>
+        <td>@anotacion.fecha</td>
+        <td>@anotacion.mascota</td>
+        <td>@anotacion.veterinario</td>
+        <td>@anotacion.descripcion</td>
+        <td>@anotacion.medicamento</td>
+        <td>
+            <a class="btn btn-info table-btn" asp-page="/Admin/Anotaciones/DetailAnotaciones" asp-route-id="@anotacion.id"><i class="fa fa-info-circle"></i></a>
+            <a class="btn btn-success table-btn" asp-page="/Admin/Anotaciones/EditAnotaciones" asp-route-id="@anotacion.id"><i class="fa fa-edit"></i></a>
+            <a class="btn btn-danger table-btn" asp-page="/Admin/Anotaciones/delete" asp-route-id="@anotacion.id"><i class='fa fa-trash'></i></a>
+        </td>
+    </tr>
+    }
+
+    </table>
+</div>
+</div>
