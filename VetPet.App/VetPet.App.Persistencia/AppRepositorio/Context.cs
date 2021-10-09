@@ -7,14 +7,15 @@ namespace VetPet.App.Persistencia
 {
     public class Context : DbContext
     {
+        public DbSet<Anotacion> Anotaciones {get; set;}
+        public DbSet<Cita> Citas{get; set;}
+        public DbSet<Historia> Historias {get; set;}
+        public DbSet<Mascota> Mascotas {get; set;}
         public DbSet<Persona> Personas {get; set;}
         public DbSet<Propietario> Propietarios {get; set;}
-	      public DbSet<Veterinario> Veterinarios {get; set;}
-        public DbSet<Mascota> Mascotas {get; set;}
-        public DbSet<Cita> Citas{get; set;}
-        public DbSet<HistoriaClinica> HistoriasClinicas {get; set;}
-        public DbSet<Usuario> Usuarios {get; set;}
-        public DbSet<Admin> Admins {get; set;}
+        public DbSet<Usuario> Usuarios {get; set;} 
+	    public DbSet<Veterinario> Veterinarios {get; set;}        
+        //public DbSet<Admin> Admins {get; set;}
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {

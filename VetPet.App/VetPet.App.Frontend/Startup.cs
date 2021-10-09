@@ -26,11 +26,13 @@ namespace VetPet.App.Frontend
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            services.AddSingleton<IRepositorioUsuario>(new RepositorioUsuario(new Context()));
-            services.AddSingleton<IRepositorioAdmin>(new RepositorioAdmin(new Context()));
-            services.AddSingleton<IRepositorioPropietario>(new RepositorioPropietario(new Context()));
-            services.AddSingleton<IRepositorioVeterinario>(new RepositorioVeterinario(new Context()));
+            services.AddSingleton<IRepositorioAnotacion>(new RepositorioAnotacion(new Context()));
+            //services.AddSingleton<IRepositorioCita>(new RepositorioCita(new Context()));
+            services.AddSingleton<IRepositorioHistoria>(new RepositorioHistoria(new Context()));
             services.AddSingleton<IRepositorioMascota>(new RepositorioMascota(new Context()));
+            services.AddSingleton<IRepositorioPropietario>(new RepositorioPropietario(new Context()));
+            services.AddSingleton<IRepositorioUsuario>(new RepositorioUsuario(new Context()));
+            services.AddSingleton<IRepositorioVeterinario>(new RepositorioVeterinario(new Context()));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

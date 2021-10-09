@@ -34,7 +34,7 @@ namespace VetPet.App.Persistencia
            Cita citaEdicion = _context.Citas.FirstOrDefault(c => c.id == cita.id);
                 if(citaEdicion != null) {
                     citaEdicion.id = cita.id;
-                    citaEdicion.fecha =  cita.fecha;
+                    citaEdicion.dia =  cita.dia;
                     citaEdicion.hora = cita.hora;
                     citaEdicion.mascota = cita.mascota;
                     _context.SaveChanges();
