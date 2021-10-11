@@ -238,6 +238,5 @@
 /home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/Admin/Anotaciones/ListAnotaciones.cshtml.g.cs
 /home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/Admin/Citas/ListCitas.cshtml.g.cs
 /home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/Admin/Gestion.cshtml.g.cs
-/home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/Admin/Historias/ListHistorias.cshtml.g.cs
 /home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/Admin/Citas/AddCitas.cshtml.g.cs
 /home/mc107/Documents/Study/mintic/Upware-VetPet/VetPet.App/VetPet.App.Frontend/obj/Debug/net5.0/Razor/Pages/Admin/Anotaciones/AddAnotaciones.cshtml.g.cs

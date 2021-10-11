@@ -1,15 +1,17 @@
+using System;
 using System.Collections.Generic;
 using VetPet.App.Dominio;
 
-namespace VetPet.App.Persistencia
-{
-    public interface IRepositorioHistoria
-    {
+namespace VetPet.App.Persistencia{
+    public interface IRepositorioHistoria{
         IEnumerable<Historia> getAllHistorias();
-        Historia addHistoria(Historia historia);
+        Historia getHistoria(int Id);
         Historia editHistoria(Historia historia);
-        Historia getHistoria(int id);
-        void removeHistoria(int id);
-        Historia historiaP(Mascota mascota);
+        Historia addHistoria(Historia historia);
+        void RemoveHistoria(int Id);
+
+        Historia getHistoriaByMascota(Mascota mascota);
+        Historia getHistoriaByVeterinario(Veterinario veterinario);
+        //Historia getHistoriaByPacienteAndFecha(Paciente paciente,DateTime fecha_inicio,DateTime fecha_final);
     }
 }

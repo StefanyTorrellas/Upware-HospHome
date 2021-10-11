@@ -23,8 +23,8 @@ namespace VetPet.App.Frontend
         public IEnumerable<SelectListItem> veterinarios {get; set;}
 
         public Anotacion anotacion {get; set;}
-
-        public int cedulaPropietario {get; set;}
+        public Historia historia {get; set;}
+        public int idMascota {get; set;}
         public int cedulaVeterinario {get; set;}
 
         public AddAnotacionesModel(IRepositorioAnotacion repositorioAnotacion, IRepositorioMascota repositorioMascota, IRepositorioVeterinario repositorioVeterinario, IRepositorioHistoria repositorioHistoria, IRepositorioPropietario repositorioPropietario) {
@@ -37,14 +37,7 @@ namespace VetPet.App.Frontend
 
         public void OnGet()
         {
-            propietarios = repositorioPropietario.getAllPropietarios().Select(
-                m => new SelectListItem {
-                    Value = Convert.ToString(m.cedula),
-                    Text = m.nombre +" "+m.apellido
-                }
-            );
-        
-        
+            
             mascotas = repositorioMascota.getAllMascotas().Select(
                 m => new SelectListItem {
                     Value = Convert.ToString(m.id),
@@ -61,10 +54,12 @@ namespace VetPet.App.Frontend
             anotacion = new Anotacion();
         }
 
-        public IActionResult OnPost (Anotacion anotacion, int cedulaPropietario, int cedulaVeterinario) {
+        public IActionResult OnPost (Anotacion anotacion, int idMascota, int cedulaVeterinario) {
+
             if (ModelState.IsValid) {
-                Mascota mascota = repositorioMascota.getMascotaP(cedulaPropietario);
+                Mascota mascota = repositorioMascota.getMascota(idMascota);
                 Veterinario veterinario = repositorioVeterinario.getVeterinario(cedulaVeterinario);
+                Historia historia = repositorioHistoria.getHistoriaByMascota(mascota);
 
                 Anotacion anotacionNueva = new Anotacion() {
                     fecha = anotacion.fecha,
@@ -74,7 +69,6 @@ namespace VetPet.App.Frontend
                     medicamento = anotacion.medicamento
                 };
 
-                Historia historia = repositorioHistoria.historiaP(mascota);
 
                 if (historia == null) {
                     historia = new Historia() {
@@ -84,6 +78,7 @@ namespace VetPet.App.Frontend
                     repositorioHistoria.addHistoria(historia);
                 }
                 else {
+                    
                     List<Anotacion> listAnotaciones = historia.anotaciones;
                     listAnotaciones.Add(anotacionNueva);
                     historia.anotaciones = listAnotaciones;

@@ -27,7 +27,7 @@ namespace VetPet.App.Frontend
         {
             services.AddRazorPages();
             services.AddSingleton<IRepositorioAnotacion>(new RepositorioAnotacion(new Context()));
-            //services.AddSingleton<IRepositorioCita>(new RepositorioCita(new Context()));
+            services.AddSingleton<IRepositorioCita>(new RepositorioCita(new Context()));
             services.AddSingleton<IRepositorioHistoria>(new RepositorioHistoria(new Context()));
             services.AddSingleton<IRepositorioMascota>(new RepositorioMascota(new Context()));
             services.AddSingleton<IRepositorioPropietario>(new RepositorioPropietario(new Context()));

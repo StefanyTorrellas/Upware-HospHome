@@ -17,15 +17,6 @@ namespace VetPet.App.Frontend
         private readonly IRepositorioCita repositorioCita;
         public IEnumerable<Cita> citas;
 
-        [DataType(DataType.Date),Range(typeof(DateTime), "1/1/2021", "31/12/2025", ErrorMessage = "El valor {0} debe estar {1} y {2}")]
-        public DateTime Dia {get; set;}
-
-        [DataType(DataType.Date),Range(typeof(DateTime), "1/1/2021", "31/12/2025", ErrorMessage = "El valor {0} debe estar {1} y {2}")]
-        public DateTime DiaInicial {get; set;}
-
-        [DataType(DataType.Date),Range(typeof(DateTime), "1/1/2021", "31/12/2025", ErrorMessage = "El valor {0} debe estar {1} y {2}")]
-        public DateTime DiaFinal {get; set;}
-
         public ListCitasModel(IRepositorioCita repositorioCita) {
             this.repositorioCita = repositorioCita;
         }

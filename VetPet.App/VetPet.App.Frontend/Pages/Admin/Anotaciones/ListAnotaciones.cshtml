@@ -24,10 +24,10 @@
     @foreach(var anotacion in Model.anotaciones) { 
      <tr>
         <td>@anotacion.fecha</td>
-        <td>@anotacion.mascota</td>
+        <td>@anotacion.mascota.nombre</td>
         <td>@anotacion.veterinario</td>
         <td>@anotacion.descripcion</td>
-        <td>@anotacion.medicamento</td>
+        <td>@anotacion.mascota.propietario.cedula</td>
         <td>
             <a class="btn btn-info table-btn" asp-page="/Admin/Anotaciones/DetailAnotaciones" asp-route-id="@anotacion.id"><i class="fa fa-info-circle"></i></a>
             <a class="btn btn-success table-btn" asp-page="/Admin/Anotaciones/EditAnotaciones" asp-route-id="@anotacion.id"><i class="fa fa-edit"></i></a>

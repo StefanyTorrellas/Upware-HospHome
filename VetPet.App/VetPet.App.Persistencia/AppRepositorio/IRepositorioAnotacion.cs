@@ -9,6 +9,6 @@ namespace VetPet.App.Persistencia
         Anotacion addAnotacion(Anotacion anotacion);
         Anotacion editAnotacion(Anotacion anotacion);
         Anotacion getAnotacion(int id);
-        void removeAnotacion(int id);
+        void removeAnotacion(Anotacion anotacion);
     }
 }

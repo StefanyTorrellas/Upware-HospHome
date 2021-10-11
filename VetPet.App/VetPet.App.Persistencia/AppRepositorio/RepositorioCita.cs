@@ -1,7 +1,9 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using VetPet.App.Dominio;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 
 namespace VetPet.App.Persistencia
 {
@@ -17,45 +19,47 @@ namespace VetPet.App.Persistencia
         // Obtener todas las citas
         public IEnumerable<Cita> getAllCitas()
         {
-            return _context.Citas;
+            return _context.Citas.Include("veterinario").Include("mascota");
         }
 
         // Añadir cita
         public Cita addCita(Cita cita)
         {
-            Cita citaNueva = _context.Add(cita).Entity;
-            _context.SaveChanges();
-            return citaNueva;
+            Cita citaCruzada = _context.Citas.FirstOrDefault(
+                c => c.veterinario.cedula == cita.veterinario.cedula &&
+                cita.dia == c.dia &&
+                cita.hora >= c.hora &&
+                cita.hora < c.hora.AddMinutes(30)
+            );
+
+            Cita citaEspacio = _context.Citas.FirstOrDefault(
+                c => c.dia == cita.dia &&
+                cita.hora >= c.hora &&
+                cita.hora < c.hora.AddMinutes(30)
+            );
+
+            Cita citaMascota = _context.Citas.FirstOrDefault(
+                c => c.mascota.id == cita.mascota.id &&
+                cita.dia == c.dia &&
+                cita.hora >= c.hora &&
+                cita.hora < c.hora.AddMinutes(30)
+            );
+
+            if(citaEspacio == null && citaCruzada == null && citaMascota == null) {
+                Cita citaNueva = _context.Add(cita).Entity;
+                _context.SaveChanges();
+                return citaNueva;
+            }
+            else {
+                return null;
+            }
         }
         
-        // Editar cita
-        public Cita editCita(Cita cita)
-        {
-           Cita citaEdicion = _context.Citas.FirstOrDefault(c => c.id == cita.id);
-                if(citaEdicion != null) {
-                    citaEdicion.id = cita.id;
-                    citaEdicion.dia =  cita.dia;
-                    citaEdicion.hora = cita.hora;
-                    citaEdicion.mascota = cita.mascota;
-                    _context.SaveChanges();
-                }
-            return citaEdicion;  
-            }
-
         // Obtener una cita
         public Cita getCita(int id)
         {
-            return _context.Citas.FirstOrDefault(c => c.id == id);
+            return _context.Citas.Include("veterinario").Include("mascota").FirstOrDefault(c => c.id == id);
         }
 
-        // Eliminar cita
-        public void removeCita(int id)
-        {
-            Cita citaEliminar = _context.Citas.FirstOrDefault(c => c.id == id);
-            if (citaEliminar != null) {
-                _context.Citas.Remove(citaEliminar);
-                _context.SaveChanges();
-            }
-        }
     }
 }

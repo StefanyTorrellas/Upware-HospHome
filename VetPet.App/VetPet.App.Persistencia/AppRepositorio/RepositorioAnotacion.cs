@@ -7,55 +7,49 @@ namespace VetPet.App.Persistencia
 {
     public class RepositorioAnotacion : IRepositorioAnotacion
     {
-        // Contexto
+        
         private readonly Context _context;
         public RepositorioAnotacion(Context context)
         {
             this._context = context;
         }
 
-        // Obtener todas las anotaciones
-        public IEnumerable<Anotacion> getAllAnotaciones()
-        {
-            return _context.Anotaciones.Include("mascota").Include("veterinario");
-        }
-
-        // Añadir anotacion
         public Anotacion addAnotacion(Anotacion anotacion)
         {
             Anotacion anotacionNueva = _context.Add(anotacion).Entity;
             _context.SaveChanges();
             return anotacionNueva;
+
         }
-        
-        // Editar anotacion
+
         public Anotacion editAnotacion(Anotacion anotacion)
         {
-            Anotacion anotacionEdicion = _context.Anotaciones.FirstOrDefault(m => m.id == anotacion.id);
-                if(anotacionEdicion != null) {
-                    anotacionEdicion.id = anotacion.id;
-                    anotacionEdicion.fecha = anotacion.fecha;
-                    anotacionEdicion.mascota = anotacion.mascota;
-                    anotacionEdicion.veterinario = anotacion.veterinario;
-                    anotacionEdicion.descripcion = anotacion.descripcion;
-                    anotacionEdicion.medicamento = anotacion.medicamento;
-                    _context.SaveChanges();
-                }
-            return anotacionEdicion;
+            Anotacion anotacionEncontrada = _context.Anotaciones.FirstOrDefault(a => a.id == anotacion.id);
+            if(anotacionEncontrada!= null){
+                anotacionEncontrada.descripcion = anotacion.descripcion;
+                anotacionEncontrada.medicamento = anotacion.medicamento;
+                anotacionEncontrada.veterinario = anotacion.veterinario;
+                anotacionEncontrada.mascota = anotacion.mascota;
+                //anotacionEncontrada.fecha = anotacion.fecha;
+            }
+            return anotacionEncontrada;
         }
 
-        // Obtener una anotacion
+        public IEnumerable<Anotacion> getAllAnotaciones()
+        {
+            return _context.Anotaciones.Include("veterinario").Include("mascota").Include("medicamento");
+        }
+
         public Anotacion getAnotacion(int id)
         {
-            return _context.Anotaciones.Include("mascota").Include("veterinario").FirstOrDefault(m => m.id == id);
+            return _context.Anotaciones.Include("veterinario").Include("mascota").Include("medicamento").FirstOrDefault(a => a.id == id);
         }
 
-        // Eliminar anotacion
-        public void removeAnotacion(int id)
+        public void removeAnotacion(Anotacion anotacion)
         {
-            Anotacion anotacionEliminar = _context.Anotaciones.FirstOrDefault(m => m.id == id);
-            if (anotacionEliminar != null) {
-                _context.Anotaciones.Remove(anotacionEliminar);
+            Anotacion anotacionEncontrada = _context.Anotaciones.FirstOrDefault(a => a.id == anotacion.id);
+            if(anotacionEncontrada != null){
+                _context.Anotaciones.Remove(anotacionEncontrada);
                 _context.SaveChanges();
             }
         }
