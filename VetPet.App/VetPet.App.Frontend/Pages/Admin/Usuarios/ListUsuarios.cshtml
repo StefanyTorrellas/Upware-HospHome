@@ -1,4 +1,39 @@
-﻿@page
+﻿@page "/admin/usuarios/list"
 @model VetPet.App.Frontend.ListUsuariosModel
+@using VetPet.App.Dominio
 @{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Sistema de clínica veterinaría";
 }
+<a class="h1" data-toggle="tooltip" data-placement="right" title="En está pagina podrás gestionar los usuarios de vetpet">Gestionar Usuarios</a>
+<br>
+<div class="mt-sm-4">
+<a class="btn btn-primary table-btn" href="/admin/usuarios/add">Agregar Usuario</a><br>
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead class="thead-dark">
+    	      <tr>
+                <th scope="col">id</th>
+                <th scope="col">UserName</th>
+	            <th scope="col">Email</th>
+	    	    <th scope="col">Contraseña</th>
+            	  
+            </tr>
+    	</thead>
+    @foreach(var usuario in Model.usuarios) {
+    <tr>
+        <td>@usuario.id</td>
+        <td>@usuario.username</td>
+        <td>@usuario.email</td>
+        <td>@usuario.password</td>
+        <td>
+            <a class="btn btn-info table-btn" data-toggle="tooltip" data-placement="right" title="Ver más" asp-page="/Admin/Usuarios/DetailUsuarios" asp-route-cedula="@usuario.username"><i class="fa fa-info-circle"></i></a>
+            <a class="btn btn-success table-btn" data-toggle="tooltip" data-placement="right" title="Editar" asp-page="/Admin/Usuarios/EditUsuarios" asp-route-cedula="@usuario.username"><i class="fa fa-edit"></i></a>
+            <a class="btn btn-danger table-btn" data-toggle="tooltip" data-placement="right" title="Eliminar" asp-page="/Admin/Usuarios/RemoveUsuarios" asp-route-cedula="@usuario.username"><i class='fa fa-trash'></i></a>
+        </td>
+    </tr>
+    }
+
+    </table>
+</div>
+</div>

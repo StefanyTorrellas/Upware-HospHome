@@ -22,7 +22,9 @@ namespace VetPet.App.Persistencia
         // Añadir usuario
         public Usuario addUsuario(Usuario usuario)
         {
+            usuario.password = Encrypt.GetSHA256(usuario.password);
             Usuario usuarioNuevo = _context.Add(usuario).Entity;
+            _context.SaveChanges();
             return usuarioNuevo;
         }
         
